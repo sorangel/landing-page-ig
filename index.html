@@ -10,7 +10,7 @@
     <style>
         body { font-family: 'Poppins', sans-serif; }
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://res.cloudinary.com/dqqabrluc/image/upload/v1757554711/Whisk_b807bf16f028584923c459d3bb8a8aa1dr_chpyes.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://res.cloudinary.com/dqqabrluc/image/upload/v1757802370/Generated_Image_September_13_2025_-_6_25PM_g1wrkq.png');
             background-size: cover;
             background-position: center;
         }
@@ -596,8 +596,8 @@
             emailjs.init('-QoHg53x_w9YvS58H');
         })();
 
-        // URL directa a tu archivo PDF alojado localmente en la carpeta de assets del proyecto
-        const pdfUrl = './assets/Guia-Migratoria-Immigrant-Gateway.pdf';
+        // Ruta del PDF en producción: se copia al raíz del build (dist) mediante vite-plugin-static-copy
+        // Ver vite.config.ts -> viteStaticCopy targets
         const pdfFileName = 'Guia-Migratoria-Immigrant-Gateway.pdf';
 
         const leadForm = document.getElementById('lead-download-form');
@@ -645,47 +645,51 @@
         }
 
         async function triggerFileDownload() {
-            // Intenta verificar que el archivo local exista; si no, usa un PDF de respaldo generado en el navegador
-            let downloaded = false;
+          // Resuelve de forma robusta según la base actual del documento; en build se copia al raíz
+          const resolvedPdfUrl = new URL('Guia-Migratoria-Immigrant-Gateway.pdf', document.baseURI).href;
+
+          const downloadViaAnchor = (url, fileName) => {
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName || pdfFileName;
+            a.rel = 'noopener';
+            a.target = '_self';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          };
+
+          const fallback = () => {
+            const minimalPdf = `%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Count 1/Kids[3 0 R]>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 612 792]/Contents 4 0 R/Resources<</Font<</F1 5 0 R>>>>>>endobj\n4 0 obj<</Length 70>>stream\nBT /F1 24 Tf 72 720 Td (Guia Migratoria - Respaldo) Tj ET\nendstream\nendobj\n5 0 obj<</Type/Font/Subtype/Type1/Name/F1/BaseFont/Helvetica>>endobj\nxref\n0 6\n0000000000 65535 f \n0000000010 00000 n \n0000000060 00000 n \n0000000116 00000 n \n0000000285 00000 n \n0000000410 00000 n \ntrailer<</Size 6/Root 1 0 R>>\nstartxref\n490\n%%EOF`;
+            const blob = new Blob([minimalPdf], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            downloadViaAnchor(url, 'Guia-Migratoria-Immigrant-Gateway-Respaldo.pdf');
+            URL.revokeObjectURL(url);
+          };
+
+          try {
+            // Intento 1: GET + Blob
+            const resp = await fetch(resolvedPdfUrl, { method: 'GET' });
+            if (!resp.ok) {
+              console.warn('PDF GET not OK:', resp.status, resolvedPdfUrl);
+              // Intento 2: descarga directa por ancla
+              return downloadViaAnchor(resolvedPdfUrl, pdfFileName);
+            }
+            const blob = await resp.blob();
+            const url = URL.createObjectURL(blob);
+            downloadViaAnchor(url, pdfFileName);
+            URL.revokeObjectURL(url);
+          } catch (e) {
+            console.error('PDF GET error', e);
             try {
-                const headResp = await fetch(pdfUrl, { method: 'HEAD' });
-                if (headResp && headResp.ok) {
-                    const anchor = document.createElement('a');
-                    anchor.href = pdfUrl;
-                    anchor.download = pdfFileName;
-                    document.body.appendChild(anchor);
-                    anchor.click();
-                    document.body.removeChild(anchor);
-                    downloaded = true;
-                }
-            } catch (e) {
-                // Ignorar; usaremos el respaldo
+              // Intento 2: descarga directa por ancla
+              downloadViaAnchor(resolvedPdfUrl, pdfFileName);
+            } catch (e2) {
+              console.error('Anchor download error', e2);
+              // Intento 3: respaldo
+              fallback();
             }
-
-            if (!downloaded) {
-                // Genera un PDF mínimo como respaldo para asegurar la descarga
-                const minimalPdf = `%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Count 1/Kids[3 0 R]>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 612 792]/Contents 4 0 R/Resources<</Font<</F1 5 0 R>>>>>>endobj\n4 0 obj<</Length 70>>stream\nBT /F1 24 Tf 72 720 Td (Guia Migratoria - Respaldo) Tj ET\nendstream\nendobj\n5 0 obj<</Type/Font/Subtype/Type1/Name/F1/BaseFont/Helvetica>>endobj\nxref\n0 6\n0000000000 65535 f \n0000000010 00000 n \n0000000060 00000 n \n0000000116 00000 n \n0000000285 00000 n \n0000000410 00000 n \ntrailer<</Size 6/Root 1 0 R>>\nstartxref\n490\n%%EOF`;
-                const blob = new Blob([minimalPdf], { type: 'application/pdf' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = pdfFileName;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            }
-
-            // Restaura el formulario después de un momento
-            setTimeout(() => {
-                if (submitButton) {
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Descargar mi Guía Ahora';
-                }
-                if (leadForm) {
-                    leadForm.reset(); // Limpia el campo de email
-                }
-            }, 3000); // 3 segundos de espera
+          }
         }
     </script>
 </body>
