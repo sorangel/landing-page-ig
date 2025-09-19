@@ -20,7 +20,7 @@
             background-position: center;
         }
         .cta-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dqqabrluc/image/upload/v1757784818/AdobeStock_794644853_gedjxq.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -65,8 +65,8 @@
             opacity: 1;
         }
         /* Masonry helpers */
-        .masonry { column-gap: 1.25rem; }
-        .masonry-item { break-inside: avoid; margin-bottom: 1.25rem; }
+        .masonry { column-gap: 1.75rem; }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.75rem; }
         /* Accessibility & modal enhancements */
         .masonry-item:focus-visible { outline: 3px solid rgba(239,68,68,0.9); outline-offset: 3px; border-radius: 0.75rem; }
         .lightbox-enter { opacity: 0; }
@@ -79,7 +79,7 @@
     <!-- Header -->
     <header class="bg-white shadow-md fixed w-full top-0 z-50">
         <nav class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between gap-x-4">
                 <!-- Logo -->
                 <div class="flex items-center container mx-auto">
                     <img alt="logo" class="h-14 md:h-16 w-auto" src="https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif">
@@ -118,7 +118,7 @@
                     <a href="#nosotros" class="text-gray-700 hover:text-red-600 font-medium">Nosotros</a>
                     <a href="#testimonios" class="text-gray-700 hover:text-red-600 font-medium">Testimonios</a>
                     <a href="#contacto" class="text-gray-700 hover:text-red-600 font-medium">Contacto</a>
-                    <a href="https://api.whatsapp.com/send/?phone=12136796194&text&type=phone_number&app_absent=0" class="bg-red-600 text-white px-6 py-2 rounded-full font-medium hover:bg-red-700 transition w-fit inline-block whitespace-nowrap min-w-[160px] text-center" target="_blank" rel="noopener noreferrer" aria-label="Agendar Cita por WhatsApp">
+                    <a href="https://api.whatsapp.com/send/?phone=12136796194&text&type=phone_number&app_absent=0" class="bg-red-600 text-white px-6 py-4 rounded-full font-medium hover:bg-red-700 transition w-fit inline-block whitespace-nowrap min-w-[160px] text-center" target="_blank" rel="noopener noreferrer" aria-label="Agendar Cita por WhatsApp">
                         Agendar Cita
                     </a>
                 </div>
@@ -300,8 +300,15 @@
                         <li>✅ Entiende el vocabulario clave para no sentirte perdido.</li>
                     </ul>
                     <form id="lead-download-form" class="flex flex-col sm:flex-row gap-3">
-                        <input type="email" id="user_email_input" placeholder="Escribe tu correo para descargar" required class="flex-1 px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-300">
-                        <button type="submit" class="text-white px-6 py-3 rounded-xl font-semibold transition hover:brightness-110" style="background-color:#B3292E">Descargar mi Guía Ahora</button>
+                        <div class="flex-1">
+                            <label for="user_name_input" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                            <input type="text" id="user_name_input" name="user_name" placeholder="Escribe tu nombre" autocomplete="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-300">
+                        </div>
+                        <div class="flex-1">
+                            <label for="user_email_input" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                            <input type="email" id="user_email_input" name="user_email" placeholder="Escribe tu correo para descargar" autocomplete="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-300">
+                        </div>
+                        <button type="submit" class="text-white px-6 py-3 rounded-xl font-semibold transition hover:brightness-110 self-end sm:self-auto" style="background-color:#B3292E">Descargar mi Guía Ahora</button>
                     </form>
                     <p id="form-feedback"></p>
                 </div>
@@ -381,7 +388,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Casos de Éxito</h2>
             <!-- Masonry Gallery: responsive columns, mobile-first -->
-            <div class="masonry columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5">
+            <div class="masonry mx-auto max-w-6xl columns-1 sm:columns-2 md:columns-3 lg:columns-4 content-stretch">
                 <!-- Card 1 -->
                 <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241217-WA0010_sld7ve.jpg" alt="Visa de Trabajo" class="w-full h-auto block" loading="lazy">
@@ -623,6 +630,7 @@
 
         const leadForm = document.getElementById('lead-download-form');
         const emailInput = document.getElementById('user_email_input');
+        const nameInput = document.getElementById('user_name_input');
         const feedbackEl = document.getElementById('form-feedback');
         const submitButton = leadForm ? leadForm.querySelector('button') : null;
 
@@ -647,6 +655,7 @@
                     // Cambia "to_email" por el correo real donde quieras recibir la notificación
                     const response = await emailjs.send('service_bb90c6o', 'template_j68921b', {
                         user_email: emailInput.value,              // correo del usuario que llena el formulario
+                        user_name: nameInput ? nameInput.value : '', // nombre del usuario
                         to_email: 'tu-correo@tudominio.com',       // TODO: reemplazar por tu correo real de destino
                         from_name: 'Immigrant Gateway Web',
                         reply_to: emailInput.value,                // para responder directo al usuario
@@ -661,6 +670,8 @@
 
                     // 2. Inicia la descarga
                     await triggerFileDownload();
+                    // Oculta el mensaje una vez iniciada/completada la descarga
+                    feedbackEl.textContent = '';
                 } catch (error) {
                     console.error('EmailJS ERROR', error);
 
@@ -669,6 +680,8 @@
                     feedbackEl.style.color = 'orange'; // Naranja para indicar que algo falló en segundo plano
                     try {
                         await triggerFileDownload();
+                        // Oculta el mensaje también en el flujo de respaldo
+                        feedbackEl.textContent = '';
                     } catch (downloadErr) {
                         console.error('Download error', downloadErr);
                     }
