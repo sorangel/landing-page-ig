@@ -11,6 +11,10 @@ export default defineConfig({
         {
           src: 'assets/Guia-Migratoria-Immigrant-Gateway.pdf',
           dest: '' // copia al directorio raíz de salida (dist)
+        },
+        {
+          src: 'privacy.html',
+          dest: '' // asegura que la Política de Privacidad esté disponible en producción
         }
       ]
     })
