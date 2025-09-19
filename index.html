@@ -65,8 +65,14 @@
             opacity: 1;
         }
         /* Masonry helpers */
-        .masonry { column-gap: 1rem; }
-        .masonry-item { break-inside: avoid; }
+        .masonry { column-gap: 1.25rem; }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.25rem; }
+        /* Accessibility & modal enhancements */
+        .masonry-item:focus-visible { outline: 3px solid rgba(239,68,68,0.9); outline-offset: 3px; border-radius: 0.75rem; }
+        .lightbox-enter { opacity: 0; }
+        .lightbox-enter-active { opacity: 1; transition: opacity 200ms ease; }
+        .lightbox-image-enter { transform: scale(0.98); opacity: 0; }
+        .lightbox-image-enter-active { transform: scale(1); opacity: 1; transition: all 200ms ease; }
     </style>
 </head>
 <body class="bg-white">
@@ -375,9 +381,9 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Casos de Éxito</h2>
             <!-- Masonry Gallery: responsive columns, mobile-first -->
-            <div class="masonry columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
+            <div class="masonry columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5">
                 <!-- Card 1 -->
-                <div class="masonry-item relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4">
+                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241217-WA0010_sld7ve.jpg" alt="Visa de Trabajo" class="w-full h-auto block" loading="lazy">
                     <div class="absolute inset-x-0 bottom-0">
                         <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
@@ -386,7 +392,7 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="masonry-item relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4">
+                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP1_POST_bxlsb2.png" alt="Residencia Permanente" class="w-full h-auto block" loading="lazy">
                     <div class="absolute inset-x-0 bottom-0">
                         <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
@@ -395,7 +401,7 @@
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="masonry-item relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4">
+                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WhatsApp_Image_2025-02-17_at_9.53.58_PM_nkzgjj.jpg" alt="Ciudadanía" class="w-full h-auto block" loading="lazy">
                     <div class="absolute inset-x-0 bottom-0">
                         <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
@@ -404,7 +410,7 @@
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="masonry-item relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4">
+                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2024-12-27_at_3.21_edited_lmomjc.jpg" alt="Reunificación Familiar" class="w-full h-auto block" loading="lazy">
                     <div class="absolute inset-x-0 bottom-0">
                         <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
@@ -413,7 +419,7 @@
                     </div>
                 </div>
                 <!-- Card 5 -->
-                <div class="masonry-item relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4">
+                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP2_POST_1350_cjs9kg.png" alt="Asilo Político" class="w-full h-auto block" loading="lazy">
                     <div class="absolute inset-x-0 bottom-0">
                         <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
@@ -422,7 +428,7 @@
                     </div>
                 </div>
                 <!-- Card 6 -->
-                <div class="masonry-item relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4">
+                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-14_at_1.09.51_AM_b6s3ui.jpg" alt="DACA" class="w-full h-auto block" loading="lazy">
                     <div class="absolute inset-x-0 bottom-0">
                         <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
@@ -431,7 +437,7 @@
                     </div>
                 </div>
                 <!-- Card 7 -->
-                <div class="masonry-item relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4">
+                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241214-WA0007_xnxfkq.jpg" alt="Publicación IG - Caso de Éxito 2" class="w-full h-auto block" loading="lazy">
                     <div class="absolute inset-x-0 bottom-0">
                         <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
@@ -440,11 +446,26 @@
                     </div>
                 </div>
                 <!-- Card 8 -->
-                <div class="masonry-item relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4">
+                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4" tabindex="0" role="button" aria-label="Ver caso de éxito">
                     <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-10_at_8.53.58_PM_amnt20.jpg" alt="Publicación IG - Caso de Éxito 1" class="w-full h-auto block" loading="lazy">
                     <div class="absolute inset-x-0 bottom-0">
                         <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
                             <p class="text-white text-sm md:text-base font-medium">Caso de Éxito</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal for Casos de Éxito -->
+            <div id="case-modal" class="fixed inset-0 hidden items-center justify-center bg-black/70 p-4 z-[60]" aria-hidden="true" role="dialog" aria-modal="true">
+                <div class="relative max-w-4xl w-full">
+                    <button id="case-modal-close" class="absolute -top-3 -right-3 bg-white text-gray-800 rounded-full w-10 h-10 shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-600" aria-label="Cerrar vista ampliada">
+                        <span class="material-icons">close</span>
+                    </button>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-2xl">
+                        <img id="case-modal-image" src="" alt="Caso de Éxito" class="w-full h-auto block">
+                        <div class="p-4 border-t">
+                            <p id="case-modal-caption" class="text-gray-700 text-base"></p>
                         </div>
                     </div>
                 </div>
@@ -606,41 +627,68 @@
         const submitButton = leadForm ? leadForm.querySelector('button') : null;
 
         if (leadForm && submitButton && emailInput && feedbackEl) {
-            leadForm.addEventListener('submit', function(event) {
+            leadForm.addEventListener('submit', async function(event) {
                 event.preventDefault(); // Previene el comportamiento por defecto del formulario
+
+                // Guardar texto original para restaurarlo luego
+                const originalText = submitButton.dataset.originalText || submitButton.textContent;
+                submitButton.dataset.originalText = originalText;
 
                 // Cambia el estado del botón para dar feedback
                 submitButton.disabled = true;
+                submitButton.setAttribute('aria-busy', 'true');
                 submitButton.textContent = 'Procesando...';
                 feedbackEl.textContent = '';
 
-                // 1. Envía la notificación por correo a nuestro equipo
-                // IMPORTANTE: Ajusta los nombres de variables para que coincidan con tu plantilla de EmailJS (template_j68921b)
-                // Cambia "to_email" por el correo real donde quieras recibir la notificación
-                emailjs.send('service_bb90c6o', 'template_j68921b', {
-                    user_email: emailInput.value,              // correo del usuario que llena el formulario
-                    to_email: 'tu-correo@tudominio.com',       // TODO: reemplazar por tu correo real de destino
-                    from_name: 'Immigrant Gateway Web',
-                    reply_to: emailInput.value,                // para responder directo al usuario
-                    subject: 'Nueva solicitud de guía',
-                    message: 'Solicitud de descarga de guía migratoria'
-                })
-                .then(function(response) {
+                let success = false;
+                try {
+                    // 1. Envía la notificación por correo a nuestro equipo
+                    // IMPORTANTE: Ajusta los nombres de variables para que coincidan con tu plantilla de EmailJS (template_j68921b)
+                    // Cambia "to_email" por el correo real donde quieras recibir la notificación
+                    const response = await emailjs.send('service_bb90c6o', 'template_j68921b', {
+                        user_email: emailInput.value,              // correo del usuario que llena el formulario
+                        to_email: 'tu-correo@tudominio.com',       // TODO: reemplazar por tu correo real de destino
+                        from_name: 'Immigrant Gateway Web',
+                        reply_to: emailInput.value,                // para responder directo al usuario
+                        subject: 'Nueva solicitud de guía',
+                        message: 'Solicitud de descarga de guía migratoria'
+                    });
                     console.log('EmailJS OK', response);
 
-                    // 2. Si el correo se envió, procede a la descarga
-                    feedbackEl.textContent = '¡Descarga iniciada! Revisa tus archivos.';
+                    success = true;
+                    feedbackEl.textContent = '¡Enviado! Iniciando tu descarga...';
                     feedbackEl.style.color = 'green';
-                    triggerFileDownload();
 
-                }, function(error) {
+                    // 2. Inicia la descarga
+                    await triggerFileDownload();
+                } catch (error) {
                     console.error('EmailJS ERROR', error);
 
-                    // 2B. Aunque falle la notificación, igual le damos la guía al usuario
+                    // Aunque falle la notificación, igual le damos la guía al usuario
                     feedbackEl.textContent = 'Iniciando tu descarga... (No se pudo enviar la notificación)';
                     feedbackEl.style.color = 'orange'; // Naranja para indicar que algo falló en segundo plano
-                    triggerFileDownload();
-                });
+                    try {
+                        await triggerFileDownload();
+                    } catch (downloadErr) {
+                        console.error('Download error', downloadErr);
+                    }
+                } finally {
+                    submitButton.removeAttribute('aria-busy');
+                    if (success) {
+                        // Mostrar confirmación breve y restaurar
+                        submitButton.textContent = '¡Enviado!';
+                        setTimeout(() => {
+                            submitButton.disabled = false;
+                            submitButton.textContent = submitButton.dataset.originalText || 'Enviar';
+                            // Opcional: limpiar el formulario tras exito
+                            try { leadForm.reset(); } catch(_) {}
+                        }, 1800);
+                    } else {
+                        // Permitir reintento inmediato si hubo error
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Reintentar';
+                    }
+                }
             });
         }
 
@@ -691,6 +739,62 @@
             }
           }
         }
+    </script>
+    <script>
+        // Accessible Lightbox for Casos de Éxito
+        (function(){
+          const items = document.querySelectorAll('.masonry .masonry-item');
+          const modal = document.getElementById('case-modal');
+          const modalImg = document.getElementById('case-modal-image');
+          const modalCaption = document.getElementById('case-modal-caption');
+          const closeBtn = document.getElementById('case-modal-close');
+          let lastTrigger = null;
+
+          function openModal(src, alt, captionText, trigger){
+            lastTrigger = trigger || null;
+            modalImg.src = src;
+            modalImg.alt = alt || 'Caso de Éxito';
+            modalCaption.textContent = captionText || alt || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Focus the close button for accessibility
+            setTimeout(()=> closeBtn.focus(), 0);
+          }
+
+          function closeModal(){
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modalImg.src = '';
+            if(lastTrigger){ lastTrigger.focus(); }
+          }
+
+          items.forEach(item => {
+            function handleOpen(){
+              const img = item.querySelector('img');
+              const captionEl = item.querySelector('p');
+              const captionText = captionEl ? captionEl.textContent.trim() : (img?.alt || '');
+              openModal(img?.src, img?.alt, captionText, item);
+            }
+            item.addEventListener('click', handleOpen);
+            item.addEventListener('keydown', (e)=>{
+              if(e.key === 'Enter' || e.key === ' '){
+                e.preventDefault();
+                handleOpen();
+              }
+            });
+          });
+
+          // Close interactions
+          closeBtn?.addEventListener('click', closeModal);
+          modal?.addEventListener('click', (e)=>{
+            if(e.target === modal){ closeModal(); }
+          });
+          document.addEventListener('keydown', (e)=>{
+            if(!modal.classList.contains('hidden') && e.key === 'Escape'){
+              closeModal();
+            }
+          });
+        })();
     </script>
 </body>
 </html>
