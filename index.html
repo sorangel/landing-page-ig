@@ -124,7 +124,7 @@
                 
                 <!-- CTA Button -->
                 <div class="hidden md:block">
-                    <a href="https://api.whatsapp.com/send/?phone=12136796194&text&type=phone_number&app_absent=0" class="bg-red-600 text-white md:px-8 py-2 rounded-full font-medium hover:bg-red-700 transition inline-block whitespace-nowrap min-w-[160px] text-center px-5" target="_blank" rel="noopener noreferrer" aria-label="Agendar Cita por WhatsApp">
+                    <a href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0" class="bg-red-600 text-white md:px-8 py-2 rounded-full font-medium hover:bg-red-700 transition inline-block whitespace-nowrap min-w-[160px] text-center px-5" target="_blank" rel="noopener noreferrer" aria-label="Agendar Cita por WhatsApp">
                         Agendar Cita
                     </a>
                 </div>
@@ -145,7 +145,7 @@
                     <a href="#nosotros" class="text-gray-700 hover:text-red-600 font-medium">Nosotros</a>
                     <a href="#testimonios" class="text-gray-700 hover:text-red-600 font-medium">Testimonios</a>
                     <a href="#contacto" class="text-gray-700 hover:text-red-600 font-medium">Contacto</a>
-                    <a href="https://api.whatsapp.com/send/?phone=12136796194&text&type=phone_number&app_absent=0" class="bg-red-600 text-white px-6 py-4 rounded-full font-medium hover:bg-red-700 transition w-fit inline-block whitespace-nowrap min-w-[160px] text-center" target="_blank" rel="noopener noreferrer" aria-label="Agendar Cita por WhatsApp">
+                    <a href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0" class="bg-red-600 text-white px-6 py-4 rounded-full font-medium hover:bg-red-700 transition w-fit inline-block whitespace-nowrap min-w-[160px] text-center" target="_blank" rel="noopener noreferrer" aria-label="Agendar Cita por WhatsApp">
                         Agendar Cita
                     </a>
                 </div>
@@ -300,7 +300,7 @@
                     <div class="p-8">
                         <h3 class="text-2xl font-semibold mb-3">Más servicios</h3>
                         <p class="opacity-90 mb-6">Explora todas nuestras soluciones migratorias: ciudadanía, renovación de documentos, representación y más.</p>
-                        <a href="https://api.whatsapp.com/send/?phone=12136796194&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-teal-800 font-semibold px-5 py-2 rounded-full hover:bg-gray-100 transition">Saber más</a>
+                        <a href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-teal-800 font-semibold px-5 py-2 rounded-full hover:bg-gray-100 transition">Saber más</a>
                     </div>
                 </div>
             </div>
@@ -514,7 +514,7 @@
             <p class="text-xl mb-8 max-w-3xl mx-auto">
                 No esperes más para hacer realidad tu sueño americano. Nuestro equipo de expertos está listo para guiarte en cada paso del camino.
             </p>
-            <a href="https://api.whatsapp.com/send/?phone=12136796194&text&type=phone_number&app_absent=0" class="bg-red-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition transform hover:scale-105 inline-block" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
+            <a href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0" class="bg-red-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition transform hover:scale-105 inline-block" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
                 Contáctanos ahora
             </a>
         </div>
@@ -553,7 +553,7 @@
                         </li>
                         <li class="flex items-center">
                             <span class="material-icons text-sm mr-2">phone</span>
-                            <a href="tel:+15627196152" class="text-gray-400 hover:text-white transition">+15627196152</a>
+                            <a href="tel:+13239423057" class="text-gray-400 hover:text-white transition">+1 323 942 3057</a>
                         </li>
                     </ul>
                 </div>
@@ -686,8 +686,8 @@
                         to_email: 'tu-correo@tudominio.com',       // TODO: reemplazar por tu correo real de destino
                         from_name: 'Immigrant Gateway Web',
                         reply_to: emailInput.value,                // para responder directo al usuario
-                        subject: 'Nueva solicitud de guía',
-                        message: 'Solicitud de descarga de guía migratoria'
+                        subject: `Nueva solicitud de guía – ${nameInput ? nameInput.value : ''}`,
+                        message: `Solicitud de descarga de guía migratoria de ${nameInput ? nameInput.value : 'Usuario sin nombre'} <${emailInput.value}>`
                     });
                     console.log('EmailJS OK', response);
 
