@@ -19,6 +19,14 @@ export default defineConfig({
       ]
     })
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        consulta72h: 'consulta-72h.html',
+      }
+    }
+  },
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
