@@ -41,7 +41,7 @@ function Hero({ onCta }: { onCta: () => void }) {
           <div className="order-first lg:order-last">
             <a href="https://res.cloudinary.com/dqqabrluc/image/upload/v1763767334/photo_4974551600814820160_y_gzdhlr.jpg" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagen relacionada en una nueva pestaña">
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757802370/Generated_Image_September_13_2025_-_6_25PM_g1wrkq.png"
+                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1763767334/photo_4974551600814820160_y_gzdhlr.jpg"
                 alt="Equipo de Immigrant Gateway acompañando a clientes"
                 className="w-full rounded-2xl shadow-lg object-cover"
               />
@@ -58,12 +58,12 @@ function ProductBreakdown() {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <h3 className="text-3xl md:text-4xl font-bold text-center mb-10" style={{ color: BLUE }}>
-          Consulta 2FT™: Formación + Formulación
+          Consulta 2FT™ Sin costo: Diagnóstico + Formulación
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white rounded-2xl p-6 shadow">
             <div className="text-sm font-semibold mb-2" style={{ color: RED }}>Paso 1</div>
-            <h4 className="text-xl font-bold mb-2">Formación - 30 min</h4>
+            <h4 className="text-xl font-bold mb-2">Diagnóstico - 30 min</h4>
             <p className="text-gray-700">Diagnóstico humano. Analizamos tu historia y explicamos tus rutas posibles.</p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow">
@@ -161,18 +161,18 @@ function BookingForm() {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
             <input name="name" required placeholder="Tu nombre"
-                   className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red" />
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Correo</label>
               <input type="email" name="email" required placeholder="nombre@correo.com"
-                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red" />
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
               <input type="tel" name="phone" required placeholder="+1 555 555 5555"
-                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red" />
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red" />
             </div>
           </div>
           <div>
@@ -185,7 +185,7 @@ function BookingForm() {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Contexto de tu caso</label>
             <textarea name="notes" rows={4} placeholder="Cuéntanos brevemente tu situación"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red"></textarea>
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red"></textarea>
           </div>
           <button type="submit" className="mt-2 px-6 py-4 rounded-xl text-white font-semibold shadow w-full md:w-auto" style={{ backgroundColor: RED }}>
             Continuar a Agendamiento / Pago
