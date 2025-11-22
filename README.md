@@ -6,6 +6,7 @@ Este repositorio contiene el landing page desplegado en Vercel. Está configurad
 - Aplicar una CSP que permite conectar con los dominios de Meta necesarios.
 
 
+
 ## 1) Requisitos
 - Node.js 18+
 - Vercel para despliegue (recomendado)
