@@ -23,7 +23,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        consulta72h: 'consulta-72h.html',
       }
     }
   },
