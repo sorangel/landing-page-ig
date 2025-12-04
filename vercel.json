@@ -2,5 +2,27 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "ignoreCommand": "git ls-files --others --exclude-standard --directory | wc -l | xargs test 0 -eq"
+  "ignoreCommand": "git ls-files --others --exclude-standard --directory | wc -l | xargs test 0 -eq",
+  "rewrites": [
+    {
+      "source": "/oficina-miami",
+      "destination": "/oficina-miami.html"
+    },
+    {
+      "source": "/consulta-72h",
+      "destination": "/consulta-72h.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/booking",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/schedule",
+      "destination": "/schedule.html"
+    }
+  ]
 }

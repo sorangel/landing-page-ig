@@ -13,8 +13,32 @@ export default defineConfig({
           dest: '' // copia al directorio raíz de salida (dist)
         },
         {
-          src: 'privacy.html',
+          src: 'public/privacy.html',
           dest: '' // asegura que la Política de Privacidad esté disponible en producción
+        },
+        {
+          src: 'public/oficina-miami.html',
+          dest: '' // página de la oficina de Miami
+        },
+        {
+          src: 'public/consulta-72h.html',
+          dest: '' // página de consulta 72h
+        },
+        {
+          src: 'public/booking.html',
+          dest: '' // página de booking
+        },
+        {
+          src: 'public/schedule.html',
+          dest: '' // página de schedule
+        },
+        {
+          src: 'public/archivo-de-verificación.html',
+          dest: '' // archivo de verificación
+        },
+        {
+          src: 'public/facebook-domain-verification.html',
+          dest: '' // verificación de dominio de Facebook
         }
       ]
     })
