@@ -270,10 +270,10 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="inicio"
-        className="hero-bg min-h-screen flex items-center justify-center text-center text-white pt-28 md:pt-40 pb-16 md:pb-24"
+        className="hero-bg min-h-screen flex items-center justify-center text-center text-white pt-20 md:pt-40 pb-10 md:pb-24"
       >
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-8xl font-bold mb-10 leading-[2.0] tracking-wide ">
+          <h1 className="text-3xl md:text-8xl font-bold mb-6 md:mb-10 tracking-wide ">
             Somos tu Puente Seguro al
             <br />
             Sueño Americano
