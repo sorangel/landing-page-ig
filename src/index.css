@@ -1,3 +1,114 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url("https://res.cloudinary.com/dqqabrluc/image/upload/v1757802370/Generated_Image_September_13_2025_-_6_25PM_g1wrkq.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ceo-bg {
+    background-image: linear-gradient(
+        rgba(30, 64, 175, 0.9),
+        rgba(30, 64, 175, 0.9)
+      ),
+      url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cta-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("https://res.cloudinary.com/dqqabrluc/image/upload/v1757784818/AdobeStock_794644853_gedjxq.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .overlay-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .overlay-hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .overlay-hover:hover::before {
+    opacity: 1;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+
+  .overlay-hover:hover .overlay-text {
+    opacity: 1;
+  }
+
+  /* Masonry helpers */
+  .masonry {
+    column-gap: 1.75rem;
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.75rem;
+  }
+
+  /* Accessibility & modal enhancements */
+  .masonry-item:focus-visible {
+    outline: 3px solid rgba(239, 68, 68, 0.9);
+    outline-offset: 3px;
+    border-radius: 0.75rem;
+  }
+
+  .lightbox-enter {
+    opacity: 0;
+  }
+
+  .lightbox-enter-active {
+    opacity: 1;
+    transition: opacity 200ms ease;
+  }
+
+  .lightbox-image-enter {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+
+  .lightbox-image-enter-active {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 200ms ease;
+  }
+}

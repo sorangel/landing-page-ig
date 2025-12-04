@@ -1,1063 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immigrant Gateway | Tu Refugio Legal en USA</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gateway - Tu Futuro en América Comienza Aquí</title>
-    <meta name="facebook-domain-verification" content="bosh15664mhw6alw8mwaojkzxnhzov" />
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '811043781444979'); // <-- RECUERDA PONER TU ID AQUÍ
-        fbq('track', 'PageView');
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NF7PHX79CT">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Expertos en inmigración comprometidos con tu futuro. Asilo, visas de trabajo, peticiones familiares y más. Tu puente seguro al sueño americano."
+    />
+    <meta
+      name="keywords"
+      content="inmigración, asilo político, visa de trabajo, residencia permanente, green card, abogado de inmigración, consultoría migratoria"
+    />
+    <meta name="author" content="Immigrant Gateway" />
 
-        gtag('config', 'G-NF7PHX79CT');
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://immigrantgateway.com/" />
+    <meta property="og:title" content="Immigrant Gateway - Tu Refugio Legal" />
+    <meta
+      property="og:description"
+      content="Expertos comprometidos con tu futuro migratorio. Tu puente seguro al sueño americano."
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif"
+    />
+
+    <!-- Facebook Domain Verification -->
+    <meta
+      name="facebook-domain-verification"
+      content="bosh15664mhw6alw8mwaojkzxnhzov"
+    />
+
+    <!-- Facebook Pixel -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "811043781444979");
+      fbq("track", "PageView");
     </script>
+
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NF7PHX79CT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-NF7PHX79CT");
+    </script>
+
+    <!-- Tailwind CSS (CDN for fallback/quick styles, though project uses Vite/PostCSS) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
         }
+    </script>
 
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/dqqabrluc/image/upload/v1757802370/Generated_Image_September_13_2025_-_6_25PM_g1wrkq.png');
-            background-size: cover;
-            background-position: center;
-        }
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-        .ceo-bg {
-            background-image: linear-gradient(rgba(30, 64, 175, 0.9), rgba(30, 64, 175, 0.9)), url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .cta-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://res.cloudinary.com/dqqabrluc/image/upload/v1757784818/AdobeStock_794644853_gedjxq.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .overlay-hover {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .overlay-hover::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .overlay-hover:hover::before {
-            opacity: 1;
-        }
-
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-weight: 600;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 2;
-        }
-
-        .overlay-hover:hover .overlay-text {
-            opacity: 1;
-        }
-
-        /* Masonry helpers */
-        .masonry {
-            column-gap: 1.75rem;
-        }
-
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 1.75rem;
-        }
-
-        /* Accessibility & modal enhancements */
-        .masonry-item:focus-visible {
-            outline: 3px solid rgba(239, 68, 68, 0.9);
-            outline-offset: 3px;
-            border-radius: 0.75rem;
-        }
-
-        .lightbox-enter {
-            opacity: 0;
-        }
-
-        .lightbox-enter-active {
-            opacity: 1;
-            transition: opacity 200ms ease;
-        }
-
-        .lightbox-image-enter {
-            transform: scale(0.98);
-            opacity: 0;
-        }
-
-        .lightbox-image-enter-active {
-            transform: scale(1);
-            opacity: 1;
-            transition: all 200ms ease;
-        }
-    </style>
-</head>
-
-<body class="bg-white">
+    <!-- Schema Markup - LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Immigrant Gateway",
+        "image": "https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif",
+        "telephone": "+1-323-942-3057",
+        "email": "info@immigrantgateway.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Main St",
+          "addressLocality": "Miami",
+          "addressRegion": "FL",
+          "postalCode": "33101",
+          "addressCountry": "US"
+        },
+        "url": "https://immigrantgateway.com/"
+      }
+    </script>
+  </head>
+  <body>
     <noscript>
-        <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=ID-DE-TU-PIXEL&ev=PageView&noscript=1" /> </noscript>
-    <!-- Header -->
-    <header class="bg-white shadow-md fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between gap-x-4">
-                <!-- Logo -->
-                <div class="flex items-center container mx-auto">
-                    <img alt="logo" class="h-14 md:h-16 w-auto"
-                        src="https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif">
-
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8 ">
-                    <a href="#inicio" class="text-gray-700 hover:text-red-600 font-medium transition">Inicio</a>
-                    <a href="#servicios" class="text-gray-700 hover:text-red-600 font-medium transition">Servicios</a>
-                    <a href="#nosotros" class="text-gray-700 hover:text-red-600 font-medium transition">Nosotros</a>
-                    <a href="#testimonios"
-                        class="text-gray-700 hover:text-red-600 font-medium transition">Testimonios</a>
-                    <a href="/oficina-miami.html" class="text-gray-700 hover:text-red-600 font-medium transition">📍 Oficina Miami</a>
-                    <a href="#contacto" class="text-gray-700 hover:text-red-600 font-medium transition">Contacto</a>
-                </div>
-
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <a href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0"
-                        class="bg-red-600 text-white md:px-8 py-2 rounded-full font-medium hover:bg-red-700 transition inline-block whitespace-nowrap min-w-[160px] text-center px-5"
-                        target="_blank" rel="noopener noreferrer" aria-label="Agendar Cita por WhatsApp">
-                        Agendar Cita
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700">
-                        <span class="material-icons">menu</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="#inicio" class="text-gray-700 hover:text-red-600 font-medium">Inicio</a>
-                    <a href="#servicios" class="text-gray-700 hover:text-red-600 font-medium">Servicios</a>
-                    <a href="#nosotros" class="text-gray-700 hover:text-red-600 font-medium">Nosotros</a>
-                    <a href="#testimonios" class="text-gray-700 hover:text-red-600 font-medium">Testimonios</a>
-                    <a href="oficina-miami.html" class="text-gray-700 hover:text-red-600 font-medium">📍 Oficina Miami</a>
-                    <a href="#contacto" class="text-gray-700 hover:text-red-600 font-medium">Contacto</a>
-                    <a href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0"
-                        class="bg-red-600 text-white px-6 py-4 rounded-full font-medium hover:bg-red-700 transition w-fit inline-block whitespace-nowrap min-w-[160px] text-center"
-                        target="_blank" rel="noopener noreferrer" aria-label="Agendar Cita por WhatsApp">
-                        Agendar Cita
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="inicio"
-        class="hero-bg min-h-screen flex items-center justify-center text-center text-white pt-28 md:pt-40 pb-16 md:pb-24">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-8xl font-bold mb-10 leading-[2.0] tracking-wide ">
-                Somos tu Puente Seguro al<br>
-                Sueño Americano
-            </h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Somos expertos en procesos migratorios con más de 20 años de experiencia ayudando a familias a cumplir
-                el sueño americano
-            </p>
-            <a href="#guia-gratuita"
-                class="text-white px-8 py-4 rounded-full text-lg font-semibold transition inline-block hover:brightness-110"
-                style="background-color:#B3292E" aria-label="QUIERO MI GUÍA GRATIS">
-                QUIERO MI GUÍA SIN COSTO
-            </a>
-            <p class="mt-4 text-white/90">Descargala al instante.</p>
-        </div>
-    </section>
-
-    <!-- Barra de Confianza -->
-    <section class="bg-white py-12 border-b border-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="flex items-center space-x-4 p-6 md:p-7 rounded-2xl bg-gray-50">
-                    <span class="material-icons text-red-600 text-4xl md:text-5xl">group</span>
-                    <span class="font-semibold text-gray-800 text-lg md:text-xl">+500 Familias Guiadas</span>
-                </div>
-                <div class="flex items-center space-x-4 p-6 md:p-7 rounded-2xl bg-gray-50">
-                    <span class="material-icons text-red-600 text-4xl md:text-5xl">event</span>
-                    <span class="font-semibold text-gray-800 text-lg md:text-xl">+20 Años de Experiencia</span>
-                </div>
-                <div class="flex items-center space-x-4 p-6 md:p-7 rounded-2xl bg-gray-50">
-                    <span class="material-icons text-red-600 text-4xl md:text-5xl">description</span>
-                    <span class="font-semibold text-gray-800 text-lg md:text-xl">Licencia del Estado de
-                        California</span>
-                </div>
-                <div class="flex items-center space-x-4 p-6 md:p-7 rounded-2xl bg-gray-50">
-                    <span class="material-icons text-red-600 text-4xl md:text-5xl">verified</span>
-                    <span class="font-semibold text-gray-800 text-lg md:text-xl">Certificación BBB</span>
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757684763/Better-Business-Bureau-Logo_sbpgtb.png"
-                        alt="Logo Certificación BBB" class="h-12 md:h-12 w-auto object-contain" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Destacada (Card) -->
-    <section class="bg-gray-50 py-12">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 text-center">
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Evita los Errores que Ponen en Riesgo tu Caso.
-                    Descarga Nuestra Guía Migratoria Gratuita.</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="bg-gray-100 py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
-                ¿Por qué nuestros clientes confían en nosotros?
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="material-icons text-blue-600 text-2xl">verified_user</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Más de 20 Años de Experiencia Combinada</h3>
-                    <p class="text-gray-600">Nuestra trayectoria se traduce en estrategias legales probadas y eficientes
-                        para tu caso.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="material-icons text-blue-600 text-2xl">trending_up</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Éxito Comprobado con +500 Familias</h3>
-                    <p class="text-gray-600">Cada familia que hemos ayudado es un testimonio de nuestra dedicación y
-                        resultados.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="material-icons text-blue-600 text-2xl">support_agent</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Máxima Credibilidad y Confianza</h3>
-                    <p class="text-gray-600">Contamos con licencia del Estado de California y certificación BBB,
-                        garantizando un servicio profesional y ético.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="material-icons text-blue-600 text-2xl">schedule</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Comunicación rápida y segura</h3>
-                    <p class="text-gray-600">Contestamos tus dudas en menos de 24 horas</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servicios" class="bg-gray-50 py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Nuestros Servicios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card: Solicitud de asilo -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757784817/AdobeStock_633062844_Editorial_Use_Only_hipkod.jpg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Solicitud de asilo" class="w-full h-44 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Solicitud de asilo</h3>
-                        <p class="text-gray-600 mb-4">Acompañamiento experto para preparar y presentar tu caso con la
-                            documentación adecuada.</p>
-                        <a href="#" class="text-red-600 font-semibold hover:text-red-700 transition">Saber más →</a>
-                    </div>
-                </div>
-                <!-- Card: Permiso de trabajo -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757784819/envelopes-with-letter-from-uscis-united-states-flag-from-department-homeland-security_1_hancnm.jpg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Permiso de trabajo" class="w-full h-44 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Permiso de trabajo</h3>
-                        <p class="text-gray-600 mb-4">Tramitamos tu autorización de empleo para que puedas trabajar
-                            legalmente en EE. UU.</p>
-                        <a href="#" class="text-red-600 font-semibold hover:text-red-700 transition">Saber más →</a>
-                    </div>
-                </div>
-                <!-- Card: Perdón o Waiver -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757784818/border-patrol-officers-walk-along-corrugated-metal-fence-wear-protective-vests-utility-uniforms_f7eslb.jpg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Perdón o Waiver" class="w-full h-44 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Perdón o Waiver</h3>
-                        <p class="text-gray-600 mb-4">Evaluación y gestión de perdones migratorios según tu situación
-                            personal.</p>
-                        <a href="#" class="text-red-600 font-semibold hover:text-red-700 transition">Saber más →</a>
-                    </div>
-                </div>
-                <!-- Card: Ajuste por matrimonio -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757784815/anillos_wkt110.jpg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Ajuste por matrimonio" class="w-full h-44 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Ajuste por matrimonio</h3>
-                        <p class="text-gray-600 mb-4">Asesoría integral para ajustar estatus a través del matrimonio con
-                            ciudadano o residente.</p>
-                        <a href="#" class="text-red-600 font-semibold hover:text-red-700 transition">Saber más →</a>
-                    </div>
-                </div>
-                <!-- Card: Petición familiar -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
-                    <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Petición familiar" class="w-full h-44 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Petición familiar</h3>
-                        <p class="text-gray-600 mb-4">Reunimos a las familias mediante peticiones y procesos migratorios
-                            claros.</p>
-                        <a href="#" class="text-red-600 font-semibold hover:text-red-700 transition">Saber más →</a>
-                    </div>
-                </div>
-                <!-- Card: Más servicios (featured) -->
-                <div class="rounded-2xl shadow-lg overflow-hidden bg-gray-900   text-white hover-lift">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Más servicios</h3>
-                        <p class="opacity-90 mb-6">Explora todas nuestras soluciones migratorias: ciudadanía, renovación
-                            de documentos, representación y más.</p>
-                        <a href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0"
-                            target="_blank" rel="noopener noreferrer"
-                            class="inline-block bg-white text-teal-800 font-semibold px-5 py-2 rounded-full hover:bg-gray-100 transition">Saber
-                            más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Consulta 2FT Section -->
-    <section class="bg-white py-20 border-t border-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <div
-                        class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                        Nuevo Servicio</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Consulta 2FT™ Sin costo : Diagnóstico
-                        + Formulación</h2>
-                    <p class="text-lg text-gray-700 mb-6">
-                        Obtén un diagnóstico profesional y un plan de acción claro con nuestro método exclusivo de
-                        <strong>Formación + Formulación</strong>.
-                    </p>
-
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-start">
-                            <div
-                                class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mt-1">
-                                <span class="material-icons text-red-600">psychology</span>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-semibold text-gray-900">Diagnóstico - 30 min</h4>
-                                <p class="text-gray-600">Analizamos tu historia y explicamos tus rutas posibles.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div
-                                class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mt-1">
-                                <span class="material-icons text-red-600">map</span>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-semibold text-gray-900">Mapa de Ruta Personal™</h4>
-                                <p class="text-gray-600">Recibe tu plan en ≤72h con checklist, cronograma y presupuesto.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div
-                                class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mt-1">
-                                <span class="material-icons text-red-600">support_agent</span>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-semibold text-gray-900">Soporte Continuo</h4>
-                                <p class="text-gray-600">Incluye 30 días de soporte WhatsApp SOS para resolver tus
-                                    dudas.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="consulta-72h.html"
-                        class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full text-white bg-red-600 hover:bg-red-700 transition transform hover:scale-105 shadow-lg">
-                        Conoce más sobre la Consulta 2FT™
-                        <span class="material-icons ml-2">arrow_forward</span>
-                    </a>
-                </div>
-                <div class="lg:w-1/2">
-                    <div
-                        class="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500">
-                        <img src="https://res.cloudinary.com/dqqabrluc/image/upload/v1763767334/photo_4974551600814820160_y_gzdhlr.jpg"
-                            alt="Consulta Migratoria Profesional" class="w-full h-auto object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                            <div class="text-white">
-                                <p class="font-bold text-xl">Tu futuro empieza con un plan claro</p>
-                                <p class="text-sm opacity-90">Método IGW 247™: Precisión Digital</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lead Magnet Section -->
-    <section id="guia-gratuita" class="bg-white py-20">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Left: Image -->
-                <div class="order-1">
-                    <a href="https://res.cloudinary.com/dqqabrluc/image/upload/v1757716572/_Ebook_Gui%CC%81a_Marketing_Digital_IG_ze17yr.png"
-                        target="_blank" rel="noopener noreferrer"
-                        aria-label="Abrir portada de la Guía Migratoria en una nueva pestaña">
-                        <img src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757716572/_Ebook_Gui%CC%81a_Marketing_Digital_IG_ze17yr.png"
-                            alt="Portada de la Guía Migratoria Gratuita"
-                            class="w-full max-w-md mx-auto rounded-xl shadow-xl">
-                    </a>
-                </div>
-                <!-- Right: Content & Form -->
-                <div class="order-2">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Todo lo que Necesitas Saber Antes de
-                        Iniciar tu Trámite</h2>
-                    <p class="text-lg text-gray-700 mb-6">Nuestra guía gratuita condensa 20 años de experiencia para
-                        ayudarte a navegar el sistema con seguridad. Descárgala ahora y toma el control de tu proceso.
-                    </p>
-                    <ul class="space-y-3 mb-8 text-gray-800">
-                        <li>✅ Aprende a evitar los 5 errores más costosos.</li>
-                        <li>✅ Descubre qué documentos son realmente indispensables.</li>
-                        <li>✅ Entiende el vocabulario clave para no sentirte perdido.</li>
-                    </ul>
-                    <form id="lead-download-form" class="flex flex-col sm:flex-row gap-3">
-                        <div class="flex-1">
-                            <label for="user_name_input"
-                                class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
-                            <input type="text" id="user_name_input" name="user_name" placeholder="Escribe tu nombre"
-                                autocomplete="name" required
-                                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-300">
-                        </div>
-                        <div class="flex-1">
-                            <label for="user_email_input" class="block text-sm font-medium text-gray-700 mb-1">Correo
-                                electrónico</label>
-                            <input type="email" id="user_email_input" name="user_email"
-                                placeholder="Escribe tu correo para descargar" autocomplete="email" required
-                                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-300">
-                        </div>
-                        <button type="submit"
-                            class="text-white px-6 py-3 rounded-xl font-semibold transition hover:brightness-110 self-end sm:self-auto"
-                            style="background-color:#B3292E">Descargar mi Guía Ahora</button>
-                    </form>
-                    <p id="form-feedback"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About / Team Section -->
-    <section id="nosotros" class="bg-white py-20">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Un Equipo que Entiende tu Viaje</h2>
-                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                        En Immigrant Gateway, nuestro equipo directivo combina años de experiencia y una profunda
-                        comprensión del sistema migratorio. Su liderazgo y dedicación son la base de nuestro compromiso
-                        para ofrecerle la mejor asesoría y un servicio cercano y confiable.
-                    </p>
-                    <a href="https://res.cloudinary.com/dqqabrluc/image/upload/v1757520717/IG-108_tux7nm.jpg"
-                        class="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition transform hover:scale-105 inline-block"
-                        target="_blank" rel="noopener noreferrer" aria-label="Habla con un experto por WhatsApp">
-                        Habla con un experto
-                    </a>
-                </div>
-                <div class="order-1  text-center lg:text-right">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_crop,ar_1:1/v1757733631/imagen-horizontal-web-isf_1_uw1qqe.png"
-                        alt="Equipo directivo de Immigrant Gateway"
-                        class="w-full h-100 object-cover rounded-xl shadow-xl">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonios" class="bg-gray-100 py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Clientes Satisfechos</h2>
-            <div id="testimonial-carousel" class="max-w-4xl mx-auto">
-                <div id="testimonial-slides" class="relative">
-                    <!-- Slide 1 -->
-                    <div class="slide bg-white p-8 rounded-2xl shadow-lg text-center">
-                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300"
-                            alt="Cliente satisfecho 1"
-                            class="w-20 h-20 object-cover rounded-full mx-auto mb-6 border-4 border-blue-600">
-                        <p class="text-lg italic text-gray-600 mb-6">"Gateway me ayudó a obtener mi asilo político
-                            después de años de incertidumbre. Su equipo no solo fue profesional, sino que me brindó el
-                            apoyo emocional que necesitaba. Ahora mi familia y yo vivimos tranquilos en América."</p>
-                        <h4 class="text-xl font-semibold text-gray-800">María González</h4>
-                        <p class="text-red-600 font-medium">Asilo Político Aprobado</p>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="slide bg-white p-8 rounded-2xl shadow-lg text-center hidden">
-                        <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=300"
-                            alt="Cliente satisfecho 2"
-                            class="w-20 h-20 object-cover rounded-full mx-auto mb-6 border-4 border-blue-600">
-                        <p class="text-lg italic text-gray-600 mb-6">"Profesionales, humanos y eficientes. Me
-                            acompañaron en todo mi proceso de permiso de trabajo. Hoy puedo proveer a mi familia con
-                            tranquilidad."</p>
-                        <h4 class="text-xl font-semibold text-gray-800">Carlos Ramírez</h4>
-                        <p class="text-red-600 font-medium">Permiso de Trabajo Aprobado</p>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="slide bg-white p-8 rounded-2xl shadow-lg text-center hidden">
-                        <img src="https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=300"
-                            alt="Cliente satisfecho 3"
-                            class="w-20 h-20 object-cover rounded-full mx-auto mb-6 border-4 border-blue-600">
-                        <p class="text-lg italic text-gray-600 mb-6">"Gracias a Gateway, reunimos a nuestra familia. El
-                            proceso fue claro y rápido. Los recomiendo sin dudar."</p>
-                        <h4 class="text-xl font-semibold text-gray-800">Familia Hernández</h4>
-                        <p class="text-red-600 font-medium">Reunificación Familiar</p>
-                    </div>
-                </div>
-
-                <!-- Navigation -->
-                <div class="flex items-center justify-center mt-8 space-x-4">
-                    <button id="testimonial-prev"
-                        class="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition"
-                        aria-label="Testimonio anterior">
-                        <span class="material-icons">chevron_left</span>
-                    </button>
-                    <div id="testimonial-dots" class="flex space-x-2">
-                        <button class="dot w-3 h-3 bg-red-600 rounded-full" aria-label="Ir al testimonio 1"
-                            data-index="0"></button>
-                        <button class="dot w-3 h-3 bg-gray-300 rounded-full" aria-label="Ir al testimonio 2"
-                            data-index="1"></button>
-                        <button class="dot w-3 h-3 bg-gray-300 rounded-full" aria-label="Ir al testimonio 3"
-                            data-index="2"></button>
-                    </div>
-                    <button id="testimonial-next"
-                        class="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition"
-                        aria-label="Siguiente testimonio">
-                        <span class="material-icons">chevron_right</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Success Cases Section -->
-    <section class="bg-white py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Casos de Éxito</h2>
-            <!-- Masonry Gallery: responsive columns, mobile-first -->
-            <div class="masonry mx-auto max-w-6xl columns-1 sm:columns-2 md:columns-3 lg:columns-4 content-stretch">
-                <!-- Card 1 -->
-                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
-                    tabindex="0" role="button" aria-label="Ver caso de éxito">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241217-WA0010_sld7ve.jpg"
-                        alt="Visa de Trabajo" class="w-full h-auto block" loading="lazy">
-                    <div class="absolute inset-x-0 bottom-0">
-                        <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p class="text-white text-sm md:text-base font-medium">Visa de Trabajo</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
-                    tabindex="0" role="button" aria-label="Ver caso de éxito">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP1_POST_bxlsb2.png"
-                        alt="Residencia Permanente" class="w-full h-auto block" loading="lazy">
-                    <div class="absolute inset-x-0 bottom-0">
-                        <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p class="text-white text-sm md:text-base font-medium">Residencia Permanente</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
-                    tabindex="0" role="button" aria-label="Ver caso de éxito">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WhatsApp_Image_2025-02-17_at_9.53.58_PM_nkzgjj.jpg"
-                        alt="Ciudadanía" class="w-full h-auto block" loading="lazy">
-                    <div class="absolute inset-x-0 bottom-0">
-                        <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p class="text-white text-sm md:text-base font-medium">Ciudadanía</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
-                    tabindex="0" role="button" aria-label="Ver caso de éxito">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2024-12-27_at_3.21_edited_lmomjc.jpg"
-                        alt="Reunificación Familiar" class="w-full h-auto block" loading="lazy">
-                    <div class="absolute inset-x-0 bottom-0">
-                        <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p class="text-white text-sm md:text-base font-medium">Reunificación Familiar</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
-                    tabindex="0" role="button" aria-label="Ver caso de éxito">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP2_POST_1350_cjs9kg.png"
-                        alt="Asilo Político" class="w-full h-auto block" loading="lazy">
-                    <div class="absolute inset-x-0 bottom-0">
-                        <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p class="text-white text-sm md:text-base font-medium">Asilo Político</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
-                    tabindex="0" role="button" aria-label="Ver caso de éxito">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-14_at_1.09.51_AM_b6s3ui.jpg"
-                        alt="DACA" class="w-full h-auto block" loading="lazy">
-                    <div class="absolute inset-x-0 bottom-0">
-                        <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p class="text-white text-sm md:text-base font-medium">DACA</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 7 -->
-                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
-                    tabindex="0" role="button" aria-label="Ver caso de éxito">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241214-WA0007_xnxfkq.jpg"
-                        alt="Publicación IG - Caso de Éxito 2" class="w-full h-auto block" loading="lazy">
-                    <div class="absolute inset-x-0 bottom-0">
-                        <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p class="text-white text-sm md:text-base font-medium">Caso de Éxito</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 8 -->
-                <div class="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
-                    tabindex="0" role="button" aria-label="Ver caso de éxito">
-                    <img src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-10_at_8.53.58_PM_amnt20.jpg"
-                        alt="Publicación IG - Caso de Éxito 1" class="w-full h-auto block" loading="lazy">
-                    <div class="absolute inset-x-0 bottom-0">
-                        <div class="bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p class="text-white text-sm md:text-base font-medium">Caso de Éxito</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Lightbox Modal for Casos de Éxito -->
-            <div id="case-modal" class="fixed inset-0 hidden items-center justify-center bg-black/70 p-4 z-[60]"
-                aria-hidden="true" role="dialog" aria-modal="true">
-                <div class="relative max-w-4xl w-full">
-                    <button id="case-modal-close"
-                        class="absolute -top-3 -right-3 bg-white text-gray-800 rounded-full w-10 h-10 shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-600"
-                        aria-label="Cerrar vista ampliada">
-                        <span class="material-icons">close</span>
-                    </button>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-2xl">
-                        <img id="case-modal-image" src="" alt="Caso de Éxito" class="w-full h-auto block">
-                        <div class="p-4 border-t">
-                            <p id="case-modal-caption" class="text-gray-700 text-base"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="cta-bg py-20 text-white text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">¿Listo para comenzar tu proceso?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">
-                No esperes más para hacer realidad tu sueño americano. Nuestro equipo de expertos está listo para
-                guiarte en cada paso del camino.
-            </p>
-            <a href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0"
-                class="bg-red-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition transform hover:scale-105 inline-block"
-                target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
-                Contáctanos ahora
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contacto" class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Logo and Slogan -->
-                <div>
-                    <div class="mb-4">
-                        <img alt="Immigrant Gateway logo" class="h-12 w-auto"
-                            src="https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif">
-                    </div>
-                    <p class="text-gray-400">Tu puerta de entrada al sueño americano</p>
-                </div>
-
-                <!-- Navigation Links -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Navegación</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition">Inicio</a></li>
-                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition">Servicios</a></li>
-                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
-                        <li><a href="#testimonios" class="text-gray-400 hover:text-white transition">Testimonios</a></li>
-                        <li><a href="oficina-miami.html" class="text-gray-400 hover:text-white transition">📍 Oficina Miami</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Information -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <span class="material-icons text-sm mr-2">email</span>
-                            <a href="mailto:info@immigrantgateway.com"
-                                class="text-gray-400 hover:text-white transition">info@immigrantgateway.com</a>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-sm mr-2">phone</span>
-                            <a href="tel:+13239423057" class="text-gray-400 hover:text-white transition">+1 323 942
-                                3057</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Social Media -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/immigrantgatewayconsultores/" target="_blank"
-                            rel="noopener noreferrer" aria-label="Facebook"
-                            class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
-                            <span class="material-icons text-white">facebook</span>
-                        </a>
-                        <a href="https://www.instagram.com/immigrantgateway/#" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram"
-                            class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
-                            <span class="material-icons text-white">camera_alt</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="border-gray-800 my-8">
-            <div class="flex flex-col md:flex-row items-center justify-between text-gray-400 gap-4">
-                <p class="text-center">&copy; 2024 Gateway Immigration Consulting. Todos los derechos reservados.</p>
-                <a href="privacy.html" class="text-gray-400 hover:text-white transition">Política de Privacidad</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Testimonials carousel
-        (function () {
-            const slides = Array.from(document.querySelectorAll('#testimonial-slides .slide'));
-            const dots = Array.from(document.querySelectorAll('#testimonial-dots .dot'));
-            const prevBtn = document.getElementById('testimonial-prev');
-            const nextBtn = document.getElementById('testimonial-next');
-            if (!slides.length) return;
-            let current = 0;
-
-            function showSlide(index) {
-                current = (index + slides.length) % slides.length;
-                slides.forEach((s, i) => {
-                    if (i === current) {
-                        s.classList.remove('hidden');
-                    } else {
-                        s.classList.add('hidden');
-                    }
-                });
-                if (dots.length) {
-                    dots.forEach((d, i) => {
-                        d.classList.toggle('bg-red-600', i === current);
-                        d.classList.toggle('bg-gray-300', i !== current);
-                        d.setAttribute('aria-current', i === current ? 'true' : 'false');
-                    });
-                }
-            }
-
-            prevBtn && prevBtn.addEventListener('click', () => showSlide(current - 1));
-            nextBtn && nextBtn.addEventListener('click', () => showSlide(current + 1));
-            dots.forEach(d => d.addEventListener('click', () => {
-                const idx = parseInt(d.getAttribute('data-index')) || 0;
-                showSlide(idx);
-            }));
-
-            // Initialize
-            showSlide(0);
-        })();
-    </script>
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // Inicializa EmailJS con tu Public Key
-            emailjs.init('-QoHg53x_w9YvS58H');
-        })();
-
-        // Ruta del PDF en producción: se copia al raíz del build (dist) mediante vite-plugin-static-copy
-        // Ver vite.config.ts -> viteStaticCopy targets
-        const pdfFileName = 'Guia-Migratoria-Immigrant-Gateway.pdf';
-
-        const leadForm = document.getElementById('lead-download-form');
-        const emailInput = document.getElementById('user_email_input');
-        const nameInput = document.getElementById('user_name_input');
-        const feedbackEl = document.getElementById('form-feedback');
-        const submitButton = leadForm ? leadForm.querySelector('button') : null;
-
-        if (leadForm && submitButton && emailInput && feedbackEl) {
-            leadForm.addEventListener('submit', async function (event) {
-                event.preventDefault(); // Previene el comportamiento por defecto del formulario
-
-                // Guardar texto original para restaurarlo luego
-                const originalText = submitButton.dataset.originalText || submitButton.textContent;
-                submitButton.dataset.originalText = originalText;
-
-                // Cambia el estado del botón para dar feedback
-                submitButton.disabled = true;
-                submitButton.setAttribute('aria-busy', 'true');
-                submitButton.textContent = 'Procesando...';
-                feedbackEl.textContent = '';
-
-                let success = false;
-                try {
-                    // 1. Envía la notificación por correo a nuestro equipo
-                    // IMPORTANTE: Ajusta los nombres de variables para que coincidan con tu plantilla de EmailJS (template_j68921b)
-                    // Cambia "to_email" por el correo real donde quieras recibir la notificación
-                    const response = await emailjs.send('service_bb90c6o', 'template_j68921b', {
-                        user_email: emailInput.value,              // correo del usuario que llena el formulario
-                        user_name: nameInput ? nameInput.value : '', // nombre del usuario
-                        to_email: 'tu-correo@tudominio.com',       // TODO: reemplazar por tu correo real de destino
-                        from_name: 'Immigrant Gateway Web',
-                        reply_to: emailInput.value,                // para responder directo al usuario
-                        subject: `Nueva solicitud de guía – ${nameInput ? nameInput.value : ''}`,
-                        message: `Solicitud de descarga de guía migratoria de ${nameInput ? nameInput.value : 'Usuario sin nombre'} <${emailInput.value}>`
-                    });
-                    console.log('EmailJS OK', response);
-
-                    success = true;
-                    feedbackEl.textContent = '¡Enviado! Iniciando tu descarga...';
-                    feedbackEl.style.color = 'green';
-
-                    // 2. Inicia la descarga
-                    await triggerFileDownload();
-                    // Oculta el mensaje una vez iniciada/completada la descarga
-                    feedbackEl.textContent = '';
-                } catch (error) {
-                    console.error('EmailJS ERROR', error);
-
-                    // Aunque falle la notificación, igual le damos la guía al usuario
-                    feedbackEl.textContent = 'Iniciando tu descarga... (No se pudo enviar la notificación)';
-                    feedbackEl.style.color = 'orange'; // Naranja para indicar que algo falló en segundo plano
-                    try {
-                        await triggerFileDownload();
-                        // Oculta el mensaje también en el flujo de respaldo
-                        feedbackEl.textContent = '';
-                    } catch (downloadErr) {
-                        console.error('Download error', downloadErr);
-                    }
-                } finally {
-                    submitButton.removeAttribute('aria-busy');
-                    if (success) {
-                        // Mostrar confirmación breve y restaurar
-                        submitButton.textContent = '¡Enviado!';
-                        setTimeout(() => {
-                            submitButton.disabled = false;
-                            submitButton.textContent = submitButton.dataset.originalText || 'Enviar';
-                            // Opcional: limpiar el formulario tras exito
-                            try { leadForm.reset(); } catch (_) { }
-                        }, 1800);
-                    } else {
-                        // Permitir reintento inmediato si hubo error
-                        submitButton.disabled = false;
-                        submitButton.textContent = 'Reintentar';
-                    }
-                }
-            });
-        }
-
-        async function triggerFileDownload() {
-            // Resuelve de forma robusta según la base actual del documento; en build se copia al raíz
-            const resolvedPdfUrl = new URL('Guia-Migratoria-Immigrant-Gateway.pdf', document.baseURI).href;
-
-            const downloadViaAnchor = (url, fileName) => {
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = fileName || pdfFileName;
-                a.rel = 'noopener';
-                a.target = '_self';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            };
-
-            const fallback = () => {
-                const minimalPdf = `%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Count 1/Kids[3 0 R]>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 612 792]/Contents 4 0 R/Resources<</Font<</F1 5 0 R>>>>>>endobj\n4 0 obj<</Length 70>>stream\nBT /F1 24 Tf 72 720 Td (Guia Migratoria - Respaldo) Tj ET\nendstream\nendobj\n5 0 obj<</Type/Font/Subtype/Type1/Name/F1/BaseFont/Helvetica>>endobj\nxref\n0 6\n0000000000 65535 f \n0000000010 00000 n \n0000000060 00000 n \n0000000116 00000 n \n0000000285 00000 n \n0000000410 00000 n \ntrailer<</Size 6/Root 1 0 R>>\nstartxref\n490\n%%EOF`;
-                const blob = new Blob([minimalPdf], { type: 'application/pdf' });
-                const url = URL.createObjectURL(blob);
-                downloadViaAnchor(url, 'Guia-Migratoria-Immigrant-Gateway-Respaldo.pdf');
-                URL.revokeObjectURL(url);
-            };
-
-            try {
-                // Intento 1: GET + Blob
-                const resp = await fetch(resolvedPdfUrl, { method: 'GET' });
-                if (!resp.ok) {
-                    console.warn('PDF GET not OK:', resp.status, resolvedPdfUrl);
-                    // Intento 2: descarga directa por ancla
-                    return downloadViaAnchor(resolvedPdfUrl, pdfFileName);
-                }
-                const blob = await resp.blob();
-                const url = URL.createObjectURL(blob);
-                downloadViaAnchor(url, pdfFileName);
-                URL.revokeObjectURL(url);
-            } catch (e) {
-                console.error('PDF GET error', e);
-                try {
-                    // Intento 2: descarga directa por ancla
-                    downloadViaAnchor(resolvedPdfUrl, pdfFileName);
-                } catch (e2) {
-                    console.error('Anchor download error', e2);
-                    // Intento 3: respaldo
-                    fallback();
-                }
-            }
-        }
-    </script>
-    <script>
-        // Accessible Lightbox for Casos de Éxito
-        (function () {
-            const items = document.querySelectorAll('.masonry .masonry-item');
-            const modal = document.getElementById('case-modal');
-            const modalImg = document.getElementById('case-modal-image');
-            const modalCaption = document.getElementById('case-modal-caption');
-            const closeBtn = document.getElementById('case-modal-close');
-            let lastTrigger = null;
-
-            function openModal(src, alt, captionText, trigger) {
-                lastTrigger = trigger || null;
-                modalImg.src = src;
-                modalImg.alt = alt || 'Caso de Éxito';
-                modalCaption.textContent = captionText || alt || '';
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                // Focus the close button for accessibility
-                setTimeout(() => closeBtn.focus(), 0);
-            }
-
-            function closeModal() {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                modalImg.src = '';
-                if (lastTrigger) { lastTrigger.focus(); }
-            }
-
-            items.forEach(item => {
-                function handleOpen() {
-                    const img = item.querySelector('img');
-                    const captionEl = item.querySelector('p');
-                    const captionText = captionEl ? captionEl.textContent.trim() : (img?.alt || '');
-                    openModal(img?.src, img?.alt, captionText, item);
-                }
-                item.addEventListener('click', handleOpen);
-                item.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleOpen();
-                    }
-                });
-            });
-
-            // Close interactions
-            closeBtn?.addEventListener('click', closeModal);
-            modal?.addEventListener('click', (e) => {
-                if (e.target === modal) { closeModal(); }
-            });
-            document.addEventListener('keydown', (e) => {
-                if (!modal.classList.contains('hidden') && e.key === 'Escape') {
-                    closeModal();
-                }
-            });
-        })();
-    </script>
-</body>
-
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=811043781444979&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
