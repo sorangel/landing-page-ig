@@ -166,7 +166,7 @@ const OficinaMiami = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/v1764776694/WhatsApp_Image_2025-10-06_at_6.37.44_PM_ruhxaq.jpg",
                   "Fachada de la oficina Immigrant Gateway Miami - Brickell",
-                  "Fachada del Edificio"
+                  "Fachada del Edificio",
                 )
               }
             >
@@ -193,7 +193,7 @@ const OficinaMiami = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/v1764776694/WhatsApp_Image_2025-10-06_at_6.37.49_PM_2_wlbin2.jpg",
                   "Recepción de la oficina Immigrant Gateway Miami",
-                  "Área de Recepción"
+                  "Área de Recepción",
                 )
               }
             >
@@ -220,7 +220,7 @@ const OficinaMiami = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/v1764776696/WhatsApp_Image_2025-10-06_at_6.41.24_PM_1_pr2aht.jpg",
                   "Sala de consultas Immigrant Gateway Miami",
-                  "Sala de Consultas"
+                  "Sala de Consultas",
                 )
               }
             >
@@ -606,7 +606,7 @@ const OficinaMiami = () => {
                     <span className="material-icons text-amber-600 text-sm mr-2 mt-1">
                       check_circle
                     </span>
-                    Múltiples rutas de autobús disponibles
+                    Múltiples líneas de autobús disponibles
                   </li>
                 </ul>
               </div>

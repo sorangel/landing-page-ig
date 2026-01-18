@@ -1,6 +1,7 @@
-import React, { useMemo, useRef } from "react";
+import { useMemo, useRef } from "react";
 import { useUtmParams } from "../hooks/useUtm";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const BLUE = "#061475";
 const RED = "#B3292E";
@@ -20,42 +21,28 @@ function Hero({ onCta }: { onCta: () => void }) {
   return (
     <section className="pt-20 pb-16 md:pt-28 md:pb-20 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="flex justify-center items-center">
           <div>
             <h1
-              className="text-4xl md:text-5xl font-extrabold leading-tight"
+              className="text-4xl md:text-5xl font-extrabold leading-tight text-center lg:text-left"
               style={{ color: BLUE }}
             >
               Profesionales en inmigración que sí te entienden.
             </h1>
-            <h2 className="mt-4 text-xl md:text-2xl text-gray-800">
-              Claridad migratoria en ≤72 horas. Consultores certificados en
-              California, documentos bajo el método 'Cero Errores' IGW 247™ y
-              acceso a representación legal nacional.
+            <h2 className="mt-4 text-xl md:text-2xl text-gray-800 text-center lg:text-left">
+              Claridad migratoria en ≤72 horas. Consultores registrados en
+              California, preparación de documentos con revisión detallada y
+              organización administrativa profesional.
             </h2>
-            <div className="mt-8">
+            <div className="mt-8 text-center lg:text-left">
               <button
                 onClick={onCta}
                 className="px-6 py-4 rounded-xl text-white font-semibold shadow hover:brightness-110 focus:outline-none focus:ring-2 ring-offset-2"
                 style={{ backgroundColor: RED }}
               >
-                Quiero mi Mapa de Ruta en 72h
+                Agendar Consulta
               </button>
             </div>
-          </div>
-          <div className="order-first lg:order-last">
-            <a
-              href="https://res.cloudinary.com/dqqabrluc/image/upload/v1763767334/photo_4974551600814820160_y_gzdhlr.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Abrir imagen relacionada en una nueva pestaña"
-            >
-              <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1763767334/photo_4974551600814820160_y_gzdhlr.jpg"
-                alt="Equipo de Immigrant Gateway acompañando a clientes"
-                className="w-full rounded-2xl shadow-lg object-cover"
-              />
-            </a>
           </div>
         </div>
       </div>
@@ -71,17 +58,17 @@ function ProductBreakdown() {
           className="text-3xl md:text-4xl font-bold text-center mb-10"
           style={{ color: BLUE }}
         >
-          Consulta 2FT™ Sin costo: Diagnóstico + Formulación
+          Consulta Informativa de Trámites
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white rounded-2xl p-6 shadow">
             <div className="text-sm font-semibold mb-2" style={{ color: RED }}>
               Paso 1
             </div>
-            <h4 className="text-xl font-bold mb-2">Diagnóstico - 30 min</h4>
+            <h4 className="text-xl font-bold mb-2">Revisión - 30 min</h4>
             <p className="text-gray-700">
-              Diagnóstico humano. Analizamos tu historia y explicamos tus rutas
-              posibles.
+              Análisis administrativo. Identificamos tu situación y explicamos
+              los trámites posibles.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow">
@@ -90,7 +77,7 @@ function ProductBreakdown() {
             </div>
             <h4 className="text-xl font-bold mb-2">Formulación - ≤72h</h4>
             <p className="text-gray-700">
-              Recibes tu Mapa de Ruta Personal™: checklist de documentos,
+              Recibes tu Plan de Acción Personal: checklist de documentos,
               cronograma, presupuesto y análisis de riesgos.
             </p>
           </div>
@@ -103,28 +90,6 @@ function ProductBreakdown() {
               Incluye 30 días de soporte WhatsApp SOS.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Methodology() {
-  return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-5xl">
-        <div
-          className="rounded-3xl p-8 md:p-12 shadow border"
-          style={{ borderColor: "#E5E7EB" }}
-        >
-          <h3 className="text-3xl font-bold mb-4" style={{ color: BLUE }}>
-            Método IGW 247™: Precisión Digital
-          </h3>
-          <p className="text-lg text-gray-800">
-            Doble validación con un checklist de 247 puntos críticos. Si
-            cometemos un error en la preparación, reprocesamos sin costo y
-            bonificamos tu consulta. Tu tranquilidad no es negociable.
-          </p>
         </div>
       </div>
     </section>
@@ -162,22 +127,6 @@ function Locations() {
   );
 }
 
-function LegalFooter() {
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-10">
-        <p className="text-sm leading-relaxed opacity-90">
-          IGW no es un bufete y no presta servicios legales; brinda consultoría
-          y coordinación. La representación ante USCIS/EOIR la realiza un
-          abogado licenciado o un representante acreditado, según corresponda.
-          'Cero errores' aplica a documentos preparados por IGW bajo IGW 247™;
-          no garantiza resultados ante autoridades. Los SLAs son internos.
-        </p>
-      </div>
-    </footer>
-  );
-}
-
 function BookingForm() {
   const formRef = useRef<HTMLFormElement | null>(null);
   const utm = useUtmParams();
@@ -202,7 +151,7 @@ function BookingForm() {
             Reserva tu Consulta 2FT™
           </h3>
           <p className="mt-3 text-gray-700">
-            Completa el formulario para agendar y recibir tu Mapa de Ruta en
+            Completa el formulario para agendar y recibir tu Plan de Acción en
             ≤72h.
           </p>
         </div>
@@ -337,10 +286,10 @@ export default function Consulta72h() {
       <Header />
       <Hero onCta={scrollToForm} />
       <ProductBreakdown />
-      <Methodology />
+
       <BookingForm />
       <Locations />
-      <LegalFooter />
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Privacy = () => {
   return (
@@ -111,23 +112,7 @@ const Privacy = () => {
         </p>
       </main>
 
-      <footer className="bg-gray-900 text-white py-8 mt-12">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center space-x-3">
-            <img
-              alt="Immigrant Gateway logo"
-              className="h-8 w-auto"
-              src="https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif"
-            />
-            <span className="text-sm text-gray-400">
-              © 2025 Immigrant Gateway
-            </span>
-          </div>
-          <Link to="/" className="text-gray-300 hover:text-white text-sm">
-            Volver al inicio
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -69,10 +70,10 @@ const Home = () => {
     setFormFeedback("");
 
     const emailInput = formRef.current.querySelector(
-      "#user_email_input"
+      "#user_email_input",
     ) as HTMLInputElement;
     const nameInput = formRef.current.querySelector(
-      "#user_name_input"
+      "#user_name_input",
     ) as HTMLInputElement;
 
     try {
@@ -93,7 +94,7 @@ const Home = () => {
       // Trigger download
       const pdfUrl = new URL(
         "/Guia-Migratoria-Immigrant-Gateway.pdf",
-        window.location.origin
+        window.location.origin,
       ).href;
       const a = document.createElement("a");
       a.href = pdfUrl;
@@ -111,13 +112,13 @@ const Home = () => {
       console.error("Error:", error);
       setFormStatus("error");
       setFormFeedback(
-        "Iniciando tu descarga... (No se pudo enviar la notificación)"
+        "Iniciando tu descarga... (No se pudo enviar la notificación)",
       );
 
       // Fallback download
       const pdfUrl = new URL(
         "/Guia-Migratoria-Immigrant-Gateway.pdf",
-        window.location.origin
+        window.location.origin,
       ).href;
       window.location.href = pdfUrl;
     }
@@ -279,9 +280,16 @@ const Home = () => {
             Sueño Americano
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Somos expertos en procesos migratorios con más de 20 años de
-            experiencia ayudando a familias a cumplir el sueño americano
+            Te ayudamos a identificar y preparar los documentos que necesitas
+            para el trámite que TÚ elijas, con más de 20 años de experiencia.
           </p>
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl max-w-2xl mx-auto mb-8">
+            <p className="text-sm md:text-base text-white/90">
+              <strong>Aviso:</strong> IG Consulting Services, LLC no es un
+              bufete de abogados. No damos consejo legal. Somos Consultores de
+              Inmigración registrados en CA con Fianza #423022T.
+            </p>
+          </div>
           <a
             href="#guia-gratuita"
             className="text-white px-8 py-4 rounded-full text-lg font-semibold transition inline-block hover:brightness-110"
@@ -319,7 +327,7 @@ const Home = () => {
                 description
               </span>
               <span className="font-semibold text-gray-800 text-lg md:text-xl">
-                Licencia del Estado de California
+                Immigration Consultant Surety Bond #423022T
               </span>
             </div>
             <div className="flex items-center space-x-4 p-6 md:p-7 rounded-2xl bg-gray-50">
@@ -345,8 +353,8 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-              Evita los Errores que Ponen en Riesgo tu Caso. Descarga Nuestra
-              Guía Migratoria Gratuita.
+              Evita Errores de Llenado que Ponen en Riesgo tu Proceso. Descarga
+              Nuestra Guía de Trámites Gratuita.
             </h3>
           </div>
         </div>
@@ -366,11 +374,11 @@ const Home = () => {
                 </span>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Más de 20 Años de Experiencia Combinada
+                Más de 20 Años de Experiencia en Trámites
               </h3>
               <p className="text-gray-600">
-                Nuestra trayectoria se traduce en estrategias legales probadas y
-                eficientes para tu caso.
+                Nuestra trayectoria se traduce en procesos organizados y
+                eficientes para tu preparación documental.
               </p>
             </div>
 
@@ -396,11 +404,11 @@ const Home = () => {
                 </span>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Máxima Credibilidad y Confianza
+                Máxima Transparencia y Rapidez
               </h3>
               <p className="text-gray-600">
-                Contamos con licencia del Estado de California y certificación
-                BBB, garantizando un servicio profesional y ético.
+                Contamos con registro oficial en California y certificación BBB,
+                garantizando precisión y seguridad en tus documentos.
               </p>
             </div>
 
@@ -437,11 +445,15 @@ const Home = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Solicitud de asilo
+                  Preparación de Formulario I-589 (Asilo)
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Acompañamiento experto para preparar y presentar tu caso con
-                  la documentación adecuada.
+                  Asistencia técnica para transcribir y organizar la información
+                  de tu solicitud de asilo según tus instrucciones.
+                </p>
+                <p className="text-[10px] text-gray-400 mb-2 italic">
+                  Servicio limitado a transcripción y traducción de datos según
+                  instrucciones del cliente.
                 </p>
                 <a
                   href="#"
@@ -460,11 +472,15 @@ const Home = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Permiso de trabajo
+                  Permiso de trabajo (I-765)
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Tramitamos tu autorización de empleo para que puedas trabajar
-                  legalmente en EE. UU.
+                  Preparamos los formularios necesarios para tu autorización de
+                  empleo administrativo ante las autoridades.
+                </p>
+                <p className="text-[10px] text-gray-400 mb-2 italic">
+                  Servicio limitado a transcripción y traducción de datos según
+                  instrucciones del cliente.
                 </p>
                 <a
                   href="#"
@@ -483,11 +499,15 @@ const Home = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Perdón o Waiver
+                  Asistencia con Waivers (Perdones)
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Evaluación y gestión de perdones migratorios según tu
-                  situación personal.
+                  Organización de archivos y transcripción de datos para
+                  gestiones administrativas de perdones migratorios.
+                </p>
+                <p className="text-[10px] text-gray-400 mb-2 italic">
+                  Servicio limitado a transcripción y traducción de datos según
+                  instrucciones del cliente.
                 </p>
                 <a
                   href="#"
@@ -549,7 +569,7 @@ const Home = () => {
                 <h3 className="text-2xl font-semibold mb-3">Más servicios</h3>
                 <p className="opacity-90 mb-6">
                   Explora todas nuestras soluciones migratorias: ciudadanía,
-                  renovación de documentos, representación y más.
+                  renovación de documentos, preparación de archivos y más.
                 </p>
                 <a
                   href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0"
@@ -574,27 +594,27 @@ const Home = () => {
                 Nuevo Servicio
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Consulta 2FT™ Sin costo : Diagnóstico + Formulación
+                Consulta Informativa de Trámites
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Obtén un diagnóstico profesional y un plan de acción claro con
-                nuestro método exclusivo de{" "}
-                <strong>Formación + Formulación</strong>.
+                Identificamos los documentos que necesitas y trazamos un camino
+                administrativo claro para tu proceso documental.
               </p>
 
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mt-1">
                     <span className="material-icons text-red-600">
-                      psychology
+                      assignment
                     </span>
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900">
-                      Diagnóstico - 30 min
+                      Revisión - 30 min
                     </h4>
                     <p className="text-gray-600">
-                      Analizamos tu historia y explicamos tus rutas posibles.
+                      Analizamos tus documentos y explicamos las opciones
+                      administrativas disponibles.
                     </p>
                   </div>
                 </div>
@@ -605,7 +625,7 @@ const Home = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900">
-                      Mapa de Ruta Personal™
+                      Plan de Acción Personal
                     </h4>
                     <p className="text-gray-600">
                       Recibe tu plan en ≤72h con checklist, cronograma y
@@ -670,13 +690,13 @@ const Home = () => {
             {/* Left: Image */}
             <div className="order-1">
               <a
-                href="https://res.cloudinary.com/dqqabrluc/image/upload/v1757716572/_Ebook_Gui%CC%81a_Marketing_Digital_IG_ze17yr.png"
+                href="/ebook-cover-new.png"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir portada de la Guía Migratoria en una nueva pestaña"
               >
                 <img
-                  src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757716572/_Ebook_Gui%CC%81a_Marketing_Digital_IG_ze17yr.png"
+                  src="/ebook-cover-new.png"
                   alt="Portada de la Guía Migratoria Gratuita"
                   className="w-full max-w-md mx-auto rounded-xl shadow-xl"
                 />
@@ -777,7 +797,8 @@ const Home = () => {
                 En Immigrant Gateway, nuestro equipo directivo combina años de
                 experiencia y una profunda comprensión del sistema migratorio.
                 Su liderazgo y dedicación son la base de nuestro compromiso para
-                ofrecerle la mejor asesoría y un servicio cercano y confiable.
+                ofrecerle la mejor consultoría y un servicio cercano y
+                confiable.
               </p>
               <a
                 href="https://res.cloudinary.com/dqqabrluc/image/upload/v1757520717/IG-108_tux7nm.jpg"
@@ -806,6 +827,11 @@ const Home = () => {
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
             Clientes Satisfechos
           </h2>
+          <p className="text-center text-gray-500 max-w-2xl mx-auto mb-16 text-sm">
+            Resultados de trámites administrativos exitosos. Cada caso es único
+            y depende de las autoridades federales, no del preparador de
+            documentos.
+          </p>
           <div id="testimonial-carousel" className="max-w-4xl mx-auto">
             <div id="testimonial-slides" className="relative min-h-[300px]">
               {testimonials.map((testimonial, index) => (
@@ -890,7 +916,7 @@ const Home = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241217-WA0010_sld7ve.jpg",
                   "Visa de Trabajo",
-                  "Visa de Trabajo"
+                  "Visa de Trabajo",
                 )
               }
             >
@@ -918,7 +944,7 @@ const Home = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP1_POST_bxlsb2.png",
                   "Residencia Permanente",
-                  "Residencia Permanente"
+                  "Residencia Permanente",
                 )
               }
             >
@@ -946,7 +972,7 @@ const Home = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WhatsApp_Image_2025-02-17_at_9.53.58_PM_nkzgjj.jpg",
                   "Ciudadanía",
-                  "Ciudadanía"
+                  "Ciudadanía",
                 )
               }
             >
@@ -974,7 +1000,7 @@ const Home = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2024-12-27_at_3.21_edited_lmomjc.jpg",
                   "Reunificación Familiar",
-                  "Reunificación Familiar"
+                  "Reunificación Familiar",
                 )
               }
             >
@@ -1002,7 +1028,7 @@ const Home = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP2_POST_1350_cjs9kg.png",
                   "Asilo Político",
-                  "Asilo Político"
+                  "Asilo Político",
                 )
               }
             >
@@ -1030,7 +1056,7 @@ const Home = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-14_at_1.09.51_AM_b6s3ui.jpg",
                   "DACA",
-                  "DACA"
+                  "DACA",
                 )
               }
             >
@@ -1058,7 +1084,7 @@ const Home = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241214-WA0007_xnxfkq.jpg",
                   "Caso de Éxito",
-                  "Caso de Éxito"
+                  "Caso de Éxito",
                 )
               }
             >
@@ -1086,7 +1112,7 @@ const Home = () => {
                 openLightbox(
                   "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-10_at_8.53.58_PM_amnt20.jpg",
                   "Caso de Éxito",
-                  "Caso de Éxito"
+                  "Caso de Éxito",
                 )
               }
             >
@@ -1173,136 +1199,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contacto" className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Logo and Slogan */}
-            <div>
-              <div className="mb-4">
-                <img
-                  alt="Immigrant Gateway logo"
-                  className="h-12 w-auto"
-                  src="https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif"
-                />
-              </div>
-              <p className="text-gray-400">
-                Tu puerta de entrada al sueño americano
-              </p>
-            </div>
-
-            {/* Navigation Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Navegación</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#inicio"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Inicio
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#servicios"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Servicios
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#nosotros"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Nosotros
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#testimonios"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Testimonios
-                  </a>
-                </li>
-                <li>
-                  <Link
-                    to="/oficina-miami"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    📍 Oficina Miami
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Information */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contacto</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="material-icons text-sm mr-2">email</span>
-                  <a
-                    href="mailto:info@immigrantgateway.com"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    info@immigrantgateway.com
-                  </a>
-                </li>
-                <li className="flex items-center">
-                  <span className="material-icons text-sm mr-2">phone</span>
-                  <a
-                    href="tel:+12134621458"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    +1 213-4621458
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Social Media */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Síguenos</h4>
-              <div className="flex space-x-4">
-                <a
-                  href="https://www.facebook.com/immigrantgatewayconsultores/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
-                >
-                  <span className="material-icons text-white">facebook</span>
-                </a>
-                <a
-                  href="https://www.instagram.com/immigrantgateway/#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
-                >
-                  <span className="material-icons text-white">camera_alt</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <hr className="border-gray-800 my-8" />
-          <div className="flex flex-col md:flex-row items-center justify-between text-gray-400 gap-4">
-            <p className="text-center">
-              &copy; 2024 Gateway Immigration Consulting. Todos los derechos
-              reservados.
-            </p>
-            <Link
-              to="/privacy"
-              className="text-gray-400 hover:text-white transition"
-            >
-              Política de Privacidad
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

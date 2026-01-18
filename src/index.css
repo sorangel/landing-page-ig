@@ -4,36 +4,39 @@
 
 @layer utilities {
   .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
       url("https://res.cloudinary.com/dqqabrluc/image/upload/v1757802370/Generated_Image_September_13_2025_-_6_25PM_g1wrkq.png");
     background-size: cover;
     background-position: center;
   }
 
   .ceo-bg {
-    background-image: linear-gradient(
-        rgba(30, 64, 175, 0.9),
-        rgba(30, 64, 175, 0.9)
-      ),
+    background-image:
+      linear-gradient(rgba(30, 64, 175, 0.9), rgba(30, 64, 175, 0.9)),
       url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600");
     background-size: cover;
     background-position: center;
   }
 
   .cta-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("https://res.cloudinary.com/dqqabrluc/image/upload/v1757784818/AdobeStock_794644853_gedjxq.jpg");
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/cta-bg-new.png");
     background-size: cover;
     background-position: center;
   }
 
   .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .hover-lift:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
       0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
