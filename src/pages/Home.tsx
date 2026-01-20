@@ -135,7 +135,7 @@ const Home = () => {
               <img
                 alt="logo"
                 className="h-10 md:h-16 w-auto"
-                src="https://lh3.googleusercontent.com/d/1ICuqoNfR0_v0SL_FWZeykdJDLAyFlr6k"
+                src="/logo-immigrant.avif"
               />
             </div>
 
