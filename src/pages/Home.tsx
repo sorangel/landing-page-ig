@@ -26,21 +26,21 @@ const Home = () => {
       author: "María González",
       role: "Asilo Político Aprobado",
       image:
-        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "https://lh3.googleusercontent.com/d/1S_ju0NPRtiRfJ3KwcxWaddzdwqy4h0hY",
     },
     {
       text: "Profesionales, humanos y eficientes. Me acompañaron en todo mi proceso de permiso de trabajo. Hoy puedo proveer a mi familia con tranquilidad.",
       author: "Carlos Ramírez",
       role: "Permiso de Trabajo Aprobado",
       image:
-        "https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "https://lh3.googleusercontent.com/d/1Rk9N7jPbwjkf3evZHGAZ_3XojBcHq2C8",
     },
     {
       text: "Gracias a Gateway, reunimos a nuestra familia. El proceso fue claro y rápido. Los recomiendo sin dudar.",
       author: "Familia Hernández",
       role: "Reunificación Familiar",
       image:
-        "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "/IMG-ClienteSatisfecho-FamiliaHernandez.webp",
     },
   ];
 
@@ -135,7 +135,7 @@ const Home = () => {
               <img
                 alt="logo"
                 className="h-10 md:h-16 w-auto"
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif"
+                src="https://lh3.googleusercontent.com/d/1ICuqoNfR0_v0SL_FWZeykdJDLAyFlr6k"
               />
             </div>
 
@@ -207,9 +207,8 @@ const Home = () => {
           {/* Mobile Menu */}
           <div
             id="mobile-menu"
-            className={`${
-              mobileMenuOpen ? "block" : "hidden"
-            } md:hidden mt-4 pb-4`}
+            className={`${mobileMenuOpen ? "block" : "hidden"
+              } md:hidden mt-4 pb-4`}
           >
             <div className="flex flex-col space-y-4">
               <a
@@ -439,7 +438,7 @@ const Home = () => {
             {/* Card: Solicitud de asilo */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757784817/AdobeStock_633062844_Editorial_Use_Only_hipkod.jpg?auto=compress&cs=tinysrgb&w=800"
+                src="https://lh3.googleusercontent.com/d/1dOf4yyUd4fjNPY0Xo7Ptdr9aViLszf88"
                 alt="Solicitud de asilo"
                 className="w-full h-44 object-cover"
               />
@@ -466,7 +465,7 @@ const Home = () => {
             {/* Card: Permiso de trabajo */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757784819/envelopes-with-letter-from-uscis-united-states-flag-from-department-homeland-security_1_hancnm.jpg?auto=compress&cs=tinysrgb&w=800"
+                src="https://lh3.googleusercontent.com/d/1JGgFndr1OSnu6LI-O1_f8VjcrkwtoacX"
                 alt="Permiso de trabajo"
                 className="w-full h-44 object-cover"
               />
@@ -493,7 +492,7 @@ const Home = () => {
             {/* Card: Perdón o Waiver */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757784818/border-patrol-officers-walk-along-corrugated-metal-fence-wear-protective-vests-utility-uniforms_f7eslb.jpg?auto=compress&cs=tinysrgb&w=800"
+                src="https://lh3.googleusercontent.com/d/1WoApB-RotVSrhkAFeiQSD1mDOunWqkQn"
                 alt="Perdón o Waiver"
                 className="w-full h-44 object-cover"
               />
@@ -520,7 +519,7 @@ const Home = () => {
             {/* Card: Ajuste por matrimonio */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1757784815/anillos_wkt110.jpg?auto=compress&cs=tinysrgb&w=800"
+                src="https://lh3.googleusercontent.com/d/1qPKtx0wvSce6tAxn9IAoiue-jh0xMFdB"
                 alt="Ajuste por matrimonio"
                 className="w-full h-44 object-cover"
               />
@@ -543,7 +542,7 @@ const Home = () => {
             {/* Card: Petición familiar */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
               <img
-                src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://lh3.googleusercontent.com/d/1HYFxdIUk_fNCE0WI_Tm5dhAnBfDtGXXy"
                 alt="Petición familiar"
                 className="w-full h-44 object-cover"
               />
@@ -663,7 +662,7 @@ const Home = () => {
             <div className="lg:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500">
                 <img
-                  src="https://res.cloudinary.com/dqqabrluc/image/upload/v1763767334/photo_4974551600814820160_y_gzdhlr.jpg"
+                  src="https://lh3.googleusercontent.com/u/0/d/1mnCzNpjQBSG9cVFFWHvgvi0kt0iVsoUc"
                   alt="Consulta Migratoria Profesional"
                   className="w-full h-auto object-cover"
                 />
@@ -696,7 +695,7 @@ const Home = () => {
                 aria-label="Abrir portada de la Guía Migratoria en una nueva pestaña"
               >
                 <img
-                  src="/ebook-cover-new.png"
+                  src="https://lh3.googleusercontent.com/d/1xlZUzBIN9yXZ5CsTwoOmpC7TD3yw76q7"
                   alt="Portada de la Guía Migratoria Gratuita"
                   className="w-full max-w-md mx-auto rounded-xl shadow-xl"
                 />
@@ -774,9 +773,8 @@ const Home = () => {
               </form>
               <p
                 id="form-feedback"
-                className={`mt-2 ${
-                  formStatus === "error" ? "text-orange-500" : "text-green-600"
-                }`}
+                className={`mt-2 ${formStatus === "error" ? "text-orange-500" : "text-green-600"
+                  }`}
               >
                 {formFeedback}
               </p>
@@ -801,7 +799,7 @@ const Home = () => {
                 confiable.
               </p>
               <a
-                href="https://res.cloudinary.com/dqqabrluc/image/upload/v1757520717/IG-108_tux7nm.jpg"
+                href="https://api.whatsapp.com/send/?phone=13239423057"
                 className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition transform hover:scale-105 inline-block"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -812,7 +810,7 @@ const Home = () => {
             </div>
             <div className="order-1 text-center lg:text-right">
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_crop,ar_1:1/v1757733631/imagen-horizontal-web-isf_1_uw1qqe.png"
+                src="https://lh3.googleusercontent.com/d/1dNSJg51ENUx3LrNxZ-WiZIaYuLYvso3P"
                 alt="Equipo directivo de Immigrant Gateway"
                 className="w-full h-100 object-cover rounded-xl shadow-xl"
               />
@@ -837,11 +835,10 @@ const Home = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className={`slide bg-white p-8 rounded-2xl shadow-lg text-center absolute inset-0 transition-opacity duration-500 ${
-                    index === currentTestimonial
-                      ? "opacity-100 z-10 relative"
-                      : "opacity-0 z-0 absolute top-0 left-0 w-full"
-                  }`}
+                  className={`slide bg-white p-8 rounded-2xl shadow-lg text-center absolute inset-0 transition-opacity duration-500 ${index === currentTestimonial
+                    ? "opacity-100 z-10 relative"
+                    : "opacity-0 z-0 absolute top-0 left-0 w-full"
+                    }`}
                   style={{
                     display: index === currentTestimonial ? "block" : "none",
                   }}
@@ -876,11 +873,10 @@ const Home = () => {
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
-                    className={`dot w-3 h-3 rounded-full ${
-                      index === currentTestimonial
-                        ? "bg-red-600"
-                        : "bg-gray-300"
-                    }`}
+                    className={`dot w-3 h-3 rounded-full ${index === currentTestimonial
+                      ? "bg-red-600"
+                      : "bg-gray-300"
+                      }`}
                     aria-label={`Ir al testimonio ${index + 1}`}
                     onClick={() => setCurrentTestimonial(index)}
                   ></button>
@@ -914,14 +910,14 @@ const Home = () => {
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241217-WA0010_sld7ve.jpg",
+                  "https://lh3.googleusercontent.com/d/1fNZmQ1aPxr8K_Frf7m-_IRHCu_aX9TTN",
                   "Visa de Trabajo",
                   "Visa de Trabajo",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241217-WA0010_sld7ve.jpg"
+                src="https://lh3.googleusercontent.com/d/1fNZmQ1aPxr8K_Frf7m-_IRHCu_aX9TTN"
                 alt="Visa de Trabajo"
                 className="w-full h-auto block"
                 loading="lazy"
@@ -942,14 +938,14 @@ const Home = () => {
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP1_POST_bxlsb2.png",
+                  "https://lh3.googleusercontent.com/d/1T-DHM88qoTivsHZSieCbLYDejRBYzsm7",
                   "Residencia Permanente",
                   "Residencia Permanente",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP1_POST_bxlsb2.png"
+                src="https://lh3.googleusercontent.com/d/1T-DHM88qoTivsHZSieCbLYDejRBYzsm7"
                 alt="Residencia Permanente"
                 className="w-full h-auto block"
                 loading="lazy"
@@ -970,14 +966,14 @@ const Home = () => {
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WhatsApp_Image_2025-02-17_at_9.53.58_PM_nkzgjj.jpg",
+                  "https://lh3.googleusercontent.com/d/1tSDmCHznN__j_ElCZYUuWTCBc6Cdbz0a",
                   "Ciudadanía",
                   "Ciudadanía",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WhatsApp_Image_2025-02-17_at_9.53.58_PM_nkzgjj.jpg"
+                src="https://lh3.googleusercontent.com/d/1tSDmCHznN__j_ElCZYUuWTCBc6Cdbz0a"
                 alt="Ciudadanía"
                 className="w-full h-auto block"
                 loading="lazy"
@@ -998,14 +994,14 @@ const Home = () => {
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2024-12-27_at_3.21_edited_lmomjc.jpg",
+                  "https://lh3.googleusercontent.com/d/1_arasLaY3IHzsER22CGJNdHI59yyBAUa",
                   "Reunificación Familiar",
                   "Reunificación Familiar",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2024-12-27_at_3.21_edited_lmomjc.jpg"
+                src="https://lh3.googleusercontent.com/d/1_arasLaY3IHzsER22CGJNdHI59yyBAUa"
                 alt="Reunificación Familiar"
                 className="w-full h-auto block"
                 loading="lazy"
@@ -1026,14 +1022,14 @@ const Home = () => {
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP2_POST_1350_cjs9kg.png",
+                  "https://lh3.googleusercontent.com/d/1rkaRNiXA6_tD1nKDtJ9fqfwyw75g3GIq",
                   "Asilo Político",
                   "Asilo Político",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784825/WP2_POST_1350_cjs9kg.png"
+                src="https://lh3.googleusercontent.com/d/1rkaRNiXA6_tD1nKDtJ9fqfwyw75g3GIq"
                 alt="Asilo Político"
                 className="w-full h-auto block"
                 loading="lazy"
@@ -1054,14 +1050,14 @@ const Home = () => {
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-14_at_1.09.51_AM_b6s3ui.jpg",
+                  "https://lh3.googleusercontent.com/u/0/d/1EDmETRHjk4nDzLUKsxpdkpkAJ3YwZWEU",
                   "DACA",
                   "DACA",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-14_at_1.09.51_AM_b6s3ui.jpg"
+                src="https://lh3.googleusercontent.com/u/0/d/1EDmETRHjk4nDzLUKsxpdkpkAJ3YwZWEU"
                 alt="DACA"
                 className="w-full h-auto block"
                 loading="lazy"
@@ -1082,14 +1078,14 @@ const Home = () => {
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241214-WA0007_xnxfkq.jpg",
+                  "https://lh3.googleusercontent.com/d/1g4PDEZ4GipMKugqoCA4y5N64cEThT7MT",
                   "Caso de Éxito",
                   "Caso de Éxito",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784823/IMG-20241214-WA0007_xnxfkq.jpg"
+                src="https://lh3.googleusercontent.com/d/1g4PDEZ4GipMKugqoCA4y5N64cEThT7MT"
                 alt="Publicación IG - Caso de Éxito 2"
                 className="w-full h-auto block"
                 loading="lazy"
@@ -1110,14 +1106,14 @@ const Home = () => {
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-10_at_8.53.58_PM_amnt20.jpg",
+                  "https://lh3.googleusercontent.com/u/0/d/1388ay_tdumImXtHf5xeQmgn0KaUVm70w",
                   "Caso de Éxito",
                   "Caso de Éxito",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/c_fill,,f_png,g_face,h_320,w_320/r_max/v1757784824/WhatsApp_Image_2025-02-10_at_8.53.58_PM_amnt20.jpg"
+                src="https://lh3.googleusercontent.com/u/0/d/1388ay_tdumImXtHf5xeQmgn0KaUVm70w"
                 alt="Publicación IG - Caso de Éxito 1"
                 className="w-full h-auto block"
                 loading="lazy"

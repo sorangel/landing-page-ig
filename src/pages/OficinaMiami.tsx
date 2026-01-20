@@ -30,7 +30,7 @@ const OficinaMiami = () => {
                 <img
                   alt="Immigrant Gateway Logo"
                   className="h-14 md:h-16 w-auto"
-                  src="https://res.cloudinary.com/dqqabrluc/image/upload/v1756677682/logo-immigrant_iankzn.avif"
+                  src="https://lh3.googleusercontent.com/d/1ICuqoNfR0_v0SL_FWZeykdJDLAyFlr6k"
                 />
               </Link>
             </div>
@@ -90,7 +90,7 @@ const OficinaMiami = () => {
       <section
         className="min-h-screen flex items-center justify-center text-center text-white pt-28 md:pt-40 pb-16 md:pb-24 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(16, 24, 38, 0.85), rgba(16, 24, 38, 0.9)), url('https://res.cloudinary.com/dqqabrluc/image/upload/v1764776695/WhatsApp_Image_2025-10-06_at_6.37.47_PM_1_tzadrl.jpg')`,
+          backgroundImage: `linear-gradient(rgba(16, 24, 38, 0.85), rgba(16, 24, 38, 0.9)), url('/img-principal-miami.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -164,14 +164,14 @@ const OficinaMiami = () => {
               className="rounded-xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/v1764776694/WhatsApp_Image_2025-10-06_at_6.37.44_PM_ruhxaq.jpg",
+                  "https://lh3.googleusercontent.com/d/1MIu1pdWk6aBRj9VAmPLFqYBkAxTOigGv",
                   "Fachada de la oficina Immigrant Gateway Miami - Brickell",
                   "Fachada del Edificio",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1764776694/WhatsApp_Image_2025-10-06_at_6.37.44_PM_ruhxaq.jpg"
+                src="https://lh3.googleusercontent.com/d/1MIu1pdWk6aBRj9VAmPLFqYBkAxTOigGv"
                 alt="Fachada de la oficina Immigrant Gateway Miami - Brickell"
                 className="w-full h-64 object-cover"
               />
@@ -191,14 +191,14 @@ const OficinaMiami = () => {
               className="rounded-xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/v1764776694/WhatsApp_Image_2025-10-06_at_6.37.49_PM_2_wlbin2.jpg",
+                  "https://lh3.googleusercontent.com/d/1whgYd-6Egc4kiADzL48IyhJWsWwOI18C",
                   "Recepción de la oficina Immigrant Gateway Miami",
                   "Área de Recepción",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1764776694/WhatsApp_Image_2025-10-06_at_6.37.49_PM_2_wlbin2.jpg"
+                src="https://lh3.googleusercontent.com/d/1whgYd-6Egc4kiADzL48IyhJWsWwOI18C"
                 alt="Recepción de la oficina Immigrant Gateway Miami"
                 className="w-full h-64 object-cover"
               />
@@ -218,14 +218,14 @@ const OficinaMiami = () => {
               className="rounded-xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               onClick={() =>
                 openLightbox(
-                  "https://res.cloudinary.com/dqqabrluc/image/upload/v1764776696/WhatsApp_Image_2025-10-06_at_6.41.24_PM_1_pr2aht.jpg",
+                  "https://lh3.googleusercontent.com/d/15xr7jUwBrwKZ_3oON7fpNpDkt78ADows",
                   "Sala de consultas Immigrant Gateway Miami",
                   "Sala de Consultas",
                 )
               }
             >
               <img
-                src="https://res.cloudinary.com/dqqabrluc/image/upload/v1764776696/WhatsApp_Image_2025-10-06_at_6.41.24_PM_1_pr2aht.jpg"
+                src="https://lh3.googleusercontent.com/d/15xr7jUwBrwKZ_3oON7fpNpDkt78ADows"
                 alt="Sala de consultas Immigrant Gateway Miami"
                 className="w-full h-64 object-cover"
               />
@@ -373,7 +373,7 @@ const OficinaMiami = () => {
               {/* Foto del Equipo */}
               <div className="relative overflow-hidden">
                 <img
-                  src="https://res.cloudinary.com/dqqabrluc/image/upload/v1756750272/IG-115_uzlagv.jpg"
+                  src="/Angelvis-ester.jpg"
                   alt="Consultores Certificados Angelvis Arrieche y Ester Gomez - Immigrant Gateway Miami"
                   className="w-full h-full object-cover min-h-[400px] lg:min-h-[600px]"
                 />

@@ -1,0 +1,4 @@
+Nombre,Ruta Relativa,Ruta Completa,Extensión,Directorio,Tamaño (Bytes),Tamaño (KB),Tamaño (MB),Fecha Creación,Fecha Modificación,Tipo de Imagen,Uso Sugerido,Reemplazo
+Logo-Reescalado.png,Logo-Reescalado.png,C:\Users\damel\OneDrive\Documentos\GitHub\landing-page-ig\Logo-Reescalado.png,.png,Raíz del proyecto,1718234,1677.96,1.64,2026-01-19,2026-01-19,PNG (Portable Network Graphics),Logo principal del sitio,
+cta-bg-new.png,public/cta-bg-new.png,C:\Users\damel\OneDrive\Documentos\GitHub\landing-page-ig\public\cta-bg-new.png,.png,public,599478,585.43,0.57,2026-01-19,2026-01-19,PNG (Portable Network Graphics),Fondo para sección Call-to-Action,
+ebook-cover-new.png,public/ebook-cover-new.png,C:\Users\damel\OneDrive\Documentos\GitHub\landing-page-ig\public\ebook-cover-new.png,.png,public,555869,542.84,0.53,2026-01-19,2026-01-19,PNG (Portable Network Graphics),Portada del eBook/guía,
