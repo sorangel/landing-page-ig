@@ -359,7 +359,7 @@ const OficinaMiami = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Tus Consultores Certificados en California
+              Tus Consultores Certificados en Miami
             </h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
               Conoce al equipo experto que te acompañará en tu proceso
