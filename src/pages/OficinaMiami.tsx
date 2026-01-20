@@ -359,7 +359,7 @@ const OficinaMiami = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Tus Consultores Certificados en Miami
+              Tu Equipo de Preparación de Documentos en Miami
             </h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
               Conoce al equipo experto que te acompañará en tu proceso
@@ -386,7 +386,7 @@ const OficinaMiami = () => {
                     <span className="material-icons text-sm mr-1">
                       verified
                     </span>
-                    Consultores Certificados
+                    Consultores de Inmigración
                   </div>
                 </div>
               </div>
@@ -412,9 +412,8 @@ const OficinaMiami = () => {
                   </p>
                   <p className="text-gray-700 leading-relaxed text-lg">
                     Con un enfoque humanitario y atención personalizada,
-                    Angelvis y Ester han ayudado a{" "}
-                    <strong>cientos de familias</strong> en el área de Miami a
-                    alcanzar sus sueños en Estados Unidos.
+                    Angelvis y Ester han asistido administrativamente a cientos
+                    de familias en la correcta preparación de sus expedientes.
                   </p>
                   <p className="text-gray-700 leading-relaxed text-lg">
                     Nuestro equipo entiende los desafíos únicos de la comunidad
@@ -432,7 +431,7 @@ const OficinaMiami = () => {
                     >
                       workspace_premium
                     </span>
-                    Especialidades:
+                    Trámites que asistimos:
                   </h4>
                   <div className="grid grid-cols-2 gap-3">
                     <div

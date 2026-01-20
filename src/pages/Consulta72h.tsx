@@ -224,6 +224,23 @@ function BookingForm() {
               className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 ring-igw-red"
             ></textarea>
           </div>
+          <div className="mb-4">
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <input
+                type="checkbox"
+                required
+                className="mt-1 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500"
+              />
+              <span className="text-xs text-gray-700 leading-tight">
+                Acepto recibir mensajes SMS de Immigrant Gateway sobre mi caso y
+                citas. Entiendo que puedo cancelar enviando STOP. Ver{" "}
+                <Link to="/privacy" className="text-red-600 hover:underline">
+                  Política de Privacidad
+                </Link>
+                .
+              </span>
+            </label>
+          </div>
           <button
             type="submit"
             className="mt-2 px-6 py-4 rounded-xl text-white font-semibold shadow w-full md:w-auto"

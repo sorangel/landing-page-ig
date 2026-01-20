@@ -39,8 +39,7 @@ const Home = () => {
       text: "Gracias a Gateway, reunimos a nuestra familia. El proceso fue claro y rápido. Los recomiendo sin dudar.",
       author: "Familia Hernández",
       role: "Reunificación Familiar",
-      image:
-        "/IMG-ClienteSatisfecho-FamiliaHernandez.webp",
+      image: "/IMG-ClienteSatisfecho-FamiliaHernandez.webp",
     },
   ];
 
@@ -207,8 +206,9 @@ const Home = () => {
           {/* Mobile Menu */}
           <div
             id="mobile-menu"
-            className={`${mobileMenuOpen ? "block" : "hidden"
-              } md:hidden mt-4 pb-4`}
+            className={`${
+              mobileMenuOpen ? "block" : "hidden"
+            } md:hidden mt-4 pb-4`}
           >
             <div className="flex flex-col space-y-4">
               <a
@@ -528,8 +528,9 @@ const Home = () => {
                   Ajuste por matrimonio
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Asesoría integral para ajustar estatus a través del matrimonio
-                  con ciudadano o residente.
+                  Organización profesional del paquete de formularios I-130 e
+                  I-485. Te ayudamos a compilar tu evidencia documental de forma
+                  ordenada.
                 </p>
                 <a
                   href="#"
@@ -551,8 +552,9 @@ const Home = () => {
                   Petición familiar
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Reunimos a las familias mediante peticiones y procesos
-                  migratorios claros.
+                  Asistencia en la transcripción del Formulario I-130.
+                  Facilitamos el proceso administrativo para peticiones de
+                  familiares.
                 </p>
                 <a
                   href="#"
@@ -567,8 +569,9 @@ const Home = () => {
               <div className="p-8">
                 <h3 className="text-2xl font-semibold mb-3">Más servicios</h3>
                 <p className="opacity-90 mb-6">
-                  Explora todas nuestras soluciones migratorias: ciudadanía,
-                  renovación de documentos, preparación de archivos y más.
+                  Explora todos nuestros servicios de preparación de documentos:
+                  ciudadanía, renovación de documentos, preparación de archivos
+                  y más.
                 </p>
                 <a
                   href="https://api.whatsapp.com/send/?phone=13239423057&text&type=phone_number&app_absent=0"
@@ -682,102 +685,258 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Lead Magnet Section */}
-      <section id="guia-gratuita" className="bg-white py-20">
+      {/* Reconstrucción Total de la Sección "Descarga tu Guía" (UI Fix) */}
+      <section id="guia" className="bg-white py-12 border-t border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Image */}
-            <div className="order-1">
-              <a
-                href="/ebook-cover-new.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abrir portada de la Guía Migratoria en una nueva pestaña"
+          <div
+            className="guide-section-container"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "40px",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "60px 20px",
+              backgroundColor: "#f9f9f9",
+              borderRadius: "24px",
+            }}
+          >
+            {/* Columna Izquierda: Contenido */}
+            <div
+              className="guide-content"
+              style={{ flex: "1", minWidth: "300px", maxWidth: "600px" }}
+            >
+              <h2
+                style={{
+                  fontSize: "2.2rem",
+                  color: "#1a1a1a",
+                  marginBottom: "20px",
+                  lineHeight: "1.2",
+                  fontWeight: "bold",
+                }}
               >
-                <img
-                  src="https://lh3.googleusercontent.com/d/1xlZUzBIN9yXZ5CsTwoOmpC7TD3yw76q7"
-                  alt="Portada de la Guía Migratoria Gratuita"
-                  className="w-full max-w-md mx-auto rounded-xl shadow-xl"
-                />
-              </a>
-            </div>
-            {/* Right: Content & Form */}
-            <div className="order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Todo lo que Necesitas Saber Antes de Iniciar tu Trámite
+                Domina tu Papeleo: Guía de Organización Documental
               </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Nuestra guía gratuita condensa 20 años de experiencia para
-                ayudarte a navegar el sistema con seguridad. Descárgala ahora y
-                toma el control de tu proceso.
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  color: "#555",
+                  marginBottom: "30px",
+                }}
+              >
+                Nuestra guía gratuita condensa 20 años de experiencia
+                administrativa. Descárgala para organizar tu expediente sin
+                confusiones.
               </p>
-              <ul className="space-y-3 mb-8 text-gray-800">
-                <li>✅ Aprende a evitar los 5 errores más costosos.</li>
-                <li>
-                  ✅ Descubre qué documentos son realmente indispensables.
+
+              <ul style={{ listStyle: "none", padding: "0" }}>
+                <li
+                  style={{
+                    marginBottom: "15px",
+                    display: "flex",
+                    alignItems: "start",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "#b91c1c",
+                      marginRight: "10px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    ✓
+                  </span>
+                  <span>
+                    Evita rechazos por errores de llenado o falta de
+                    traducciones.
+                  </span>
                 </li>
-                <li>
-                  ✅ Entiende el vocabulario clave para no sentirte perdido.
+                <li
+                  style={{
+                    marginBottom: "15px",
+                    display: "flex",
+                    alignItems: "start",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "#b91c1c",
+                      marginRight: "10px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    ✓
+                  </span>
+                  <span>
+                    Lista de verificación (Checklist) de documentos
+                    indispensables.
+                  </span>
+                </li>
+                <li
+                  style={{
+                    marginBottom: "15px",
+                    display: "flex",
+                    alignItems: "start",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "#b91c1c",
+                      marginRight: "10px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    ✓
+                  </span>
+                  <span>Glosario simple para entender los formularios.</span>
                 </li>
               </ul>
-              <form
-                id="lead-download-form"
-                ref={formRef}
-                onSubmit={handleDownloadSubmit}
-                className="flex flex-col sm:flex-row gap-3"
+            </div>
+
+            {/* Columna Derecha: Formulario */}
+            <div
+              className="guide-form-card"
+              style={{
+                flex: "0 0 400px",
+                backgroundColor: "#fff",
+                padding: "30px",
+                borderRadius: "12px",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+                borderTop: "5px solid #b91c1c",
+              }}
+            >
+              <h3
+                style={{
+                  marginTop: "0",
+                  textAlign: "center",
+                  color: "#333",
+                  fontWeight: "bold",
+                  marginBottom: "20px",
+                }}
               >
-                <div className="flex-1">
+                Descargar Guía PDF
+              </h3>
+
+              <form ref={formRef} onSubmit={handleDownloadSubmit}>
+                <div style={{ marginBottom: "15px" }}>
                   <label
                     htmlFor="user_name_input"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    style={{
+                      display: "block",
+                      marginBottom: "8px",
+                      fontWeight: "600",
+                      fontSize: "0.9rem",
+                      color: "#333",
+                    }}
                   >
-                    Nombre
+                    Nombre Completo
                   </label>
                   <input
                     type="text"
                     id="user_name_input"
                     name="user_name"
-                    placeholder="Escribe tu nombre"
-                    autoComplete="name"
+                    placeholder="Ej. Juan Pérez"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-300"
+                    style={{
+                      width: "100%",
+                      padding: "12px",
+                      border: "1px solid #ccc",
+                      borderRadius: "6px",
+                      boxSizing: "border-box",
+                    }}
                   />
                 </div>
-                <div className="flex-1">
+
+                <div style={{ marginBottom: "15px" }}>
                   <label
                     htmlFor="user_email_input"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    style={{
+                      display: "block",
+                      marginBottom: "8px",
+                      fontWeight: "600",
+                      fontSize: "0.9rem",
+                      color: "#333",
+                    }}
                   >
-                    Correo electrónico
+                    Correo Electrónico
                   </label>
                   <input
                     type="email"
                     id="user_email_input"
                     name="user_email"
-                    placeholder="Escribe tu correo para descargar"
-                    autoComplete="email"
+                    placeholder="tucorreo@ejemplo.com"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-300"
+                    style={{
+                      width: "100%",
+                      padding: "12px",
+                      border: "1px solid #ccc",
+                      borderRadius: "6px",
+                      boxSizing: "border-box",
+                    }}
                   />
                 </div>
+
+                <div
+                  style={{
+                    marginBottom: "20px",
+                    fontSize: "0.8rem",
+                    color: "#666",
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "10px",
+                  }}
+                >
+                  <input
+                    type="checkbox"
+                    id="sms_consent"
+                    required
+                    style={{ marginTop: "4px" }}
+                  />
+                  <label htmlFor="sms_consent" style={{ lineHeight: "1.4" }}>
+                    Acepto recibir la guía y mensajes SMS sobre servicios.
+                    Entiendo que puedo cancelar enviando STOP.{" "}
+                    <Link
+                      to="/privacy"
+                      style={{ textDecoration: "underline", color: "#b91c1c" }}
+                    >
+                      Ver Política de Privacidad
+                    </Link>
+                    .
+                  </label>
+                </div>
+
                 <button
                   type="submit"
-                  className="text-white px-6 py-3 rounded-xl font-semibold transition hover:brightness-110 self-end sm:self-auto"
-                  style={{ backgroundColor: "#B3292E" }}
                   disabled={formStatus === "processing"}
+                  style={{
+                    width: "100%",
+                    backgroundColor: "#b91c1c",
+                    color: "white",
+                    padding: "15px",
+                    border: "none",
+                    borderRadius: "6px",
+                    fontWeight: "bold",
+                    fontSize: "1.1rem",
+                    cursor: "pointer",
+                    transition: "background 0.3s",
+                  }}
                 >
                   {formStatus === "processing"
                     ? "Procesando..."
-                    : "Descargar mi Guía Ahora"}
+                    : "Obtener mi Guía Ahora →"}
                 </button>
-              </form>
-              <p
-                id="form-feedback"
-                className={`mt-2 ${formStatus === "error" ? "text-orange-500" : "text-green-600"
+
+                <p
+                  id="form-feedback"
+                  className={`mt-4 text-center text-sm ${
+                    formStatus === "error"
+                      ? "text-orange-500"
+                      : "text-green-600"
                   }`}
-              >
-                {formFeedback}
-              </p>
+                >
+                  {formFeedback}
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -835,10 +994,11 @@ const Home = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className={`slide bg-white p-8 rounded-2xl shadow-lg text-center absolute inset-0 transition-opacity duration-500 ${index === currentTestimonial
-                    ? "opacity-100 z-10 relative"
-                    : "opacity-0 z-0 absolute top-0 left-0 w-full"
-                    }`}
+                  className={`slide bg-white p-8 rounded-2xl shadow-lg text-center absolute inset-0 transition-opacity duration-500 ${
+                    index === currentTestimonial
+                      ? "opacity-100 z-10 relative"
+                      : "opacity-0 z-0 absolute top-0 left-0 w-full"
+                  }`}
                   style={{
                     display: index === currentTestimonial ? "block" : "none",
                   }}
@@ -873,10 +1033,11 @@ const Home = () => {
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
-                    className={`dot w-3 h-3 rounded-full ${index === currentTestimonial
-                      ? "bg-red-600"
-                      : "bg-gray-300"
-                      }`}
+                    className={`dot w-3 h-3 rounded-full ${
+                      index === currentTestimonial
+                        ? "bg-red-600"
+                        : "bg-gray-300"
+                    }`}
                     aria-label={`Ir al testimonio ${index + 1}`}
                     onClick={() => setCurrentTestimonial(index)}
                   ></button>

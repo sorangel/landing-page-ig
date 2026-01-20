@@ -129,6 +129,26 @@ const Footer = () => {
           >
             Política de Privacidad
           </Link>
+          <ul className="flex flex-col md:flex-row gap-4 text-xs">
+            <li>
+              <Link
+                to="/privacy#es"
+                className="text-gray-500 hover:text-white transition"
+              >
+                No vender ni compartir mi información personal / Do Not Sell My
+                Info
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/privacy#es"
+                className="text-gray-500 hover:text-white transition"
+              >
+                Limitar el uso de mi información sensible / Limit Use of My
+                Sensitive Info
+              </Link>
+            </li>
+          </ul>
         </div>
 
         {/* Legal Disclaimer */}
