@@ -25,8 +25,7 @@ const Home = () => {
       text: "Gateway me ayudó a obtener mi asilo político después de años de incertidumbre. Su equipo no solo fue profesional, sino que me brindó el apoyo emocional que necesitaba. Ahora mi familia y yo vivimos tranquilos en América.",
       author: "María González",
       role: "Asilo Político Aprobado",
-      image:
-        "https://lh3.googleusercontent.com/d/1S_ju0NPRtiRfJ3KwcxWaddzdwqy4h0hY",
+      image: "/caso-asilo-politico.jpg",
     },
     {
       text: "Profesionales, humanos y eficientes. Me acompañaron en todo mi proceso de permiso de trabajo. Hoy puedo proveer a mi familia con tranquilidad.",
@@ -39,8 +38,7 @@ const Home = () => {
       text: "Gracias a Gateway, reunimos a nuestra familia. El proceso fue claro y rápido. Los recomiendo sin dudar.",
       author: "Familia Hernández",
       role: "Reunificación Familiar",
-      image:
-        "/IMG-ClienteSatisfecho-FamiliaHernandez.webp",
+      image: "/IMG-ClienteSatisfecho-FamiliaHernandez.webp",
     },
   ];
 
@@ -207,8 +205,9 @@ const Home = () => {
           {/* Mobile Menu */}
           <div
             id="mobile-menu"
-            className={`${mobileMenuOpen ? "block" : "hidden"
-              } md:hidden mt-4 pb-4`}
+            className={`${
+              mobileMenuOpen ? "block" : "hidden"
+            } md:hidden mt-4 pb-4`}
           >
             <div className="flex flex-col space-y-4">
               <a
@@ -279,14 +278,14 @@ const Home = () => {
             Sueño Americano
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Te ayudamos a identificar y preparar los documentos que necesitas
-            para el trámite que TÚ elijas, con más de 20 años de experiencia.
+            Te ayudamos a preparar los documentos que necesitas para el trámite
+            que TÚ elijas, con más de 20 años de experiencia.
           </p>
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl max-w-2xl mx-auto mb-8">
             <p className="text-sm md:text-base text-white/90">
               <strong>Aviso:</strong> IG Consulting Services, LLC no es un
               bufete de abogados. No damos consejo legal. Somos Consultores de
-              Inmigración registrados en CA con Fianza #423022T.
+              Inmigración.
             </p>
           </div>
           <a
@@ -662,7 +661,7 @@ const Home = () => {
             <div className="lg:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500">
                 <img
-                  src="https://lh3.googleusercontent.com/u/0/d/1mnCzNpjQBSG9cVFFWHvgvi0kt0iVsoUc"
+                  src="/consulta-tramites.png"
                   alt="Consulta Migratoria Profesional"
                   className="w-full h-auto object-cover"
                 />
@@ -773,8 +772,9 @@ const Home = () => {
               </form>
               <p
                 id="form-feedback"
-                className={`mt-2 ${formStatus === "error" ? "text-orange-500" : "text-green-600"
-                  }`}
+                className={`mt-2 ${
+                  formStatus === "error" ? "text-orange-500" : "text-green-600"
+                }`}
               >
                 {formFeedback}
               </p>
@@ -810,9 +810,9 @@ const Home = () => {
             </div>
             <div className="order-1 text-center lg:text-right">
               <img
-                src="https://lh3.googleusercontent.com/d/1dNSJg51ENUx3LrNxZ-WiZIaYuLYvso3P"
+                src="/equipo-ig-new.jpg"
                 alt="Equipo directivo de Immigrant Gateway"
-                className="w-full h-100 object-cover rounded-xl shadow-xl"
+                className="w-full h-auto object-cover rounded-xl shadow-xl"
               />
             </div>
           </div>
@@ -835,10 +835,11 @@ const Home = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className={`slide bg-white p-8 rounded-2xl shadow-lg text-center absolute inset-0 transition-opacity duration-500 ${index === currentTestimonial
-                    ? "opacity-100 z-10 relative"
-                    : "opacity-0 z-0 absolute top-0 left-0 w-full"
-                    }`}
+                  className={`slide bg-white p-8 rounded-2xl shadow-lg text-center absolute inset-0 transition-opacity duration-500 ${
+                    index === currentTestimonial
+                      ? "opacity-100 z-10 relative"
+                      : "opacity-0 z-0 absolute top-0 left-0 w-full"
+                  }`}
                   style={{
                     display: index === currentTestimonial ? "block" : "none",
                   }}
@@ -873,10 +874,11 @@ const Home = () => {
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
-                    className={`dot w-3 h-3 rounded-full ${index === currentTestimonial
-                      ? "bg-red-600"
-                      : "bg-gray-300"
-                      }`}
+                    className={`dot w-3 h-3 rounded-full ${
+                      index === currentTestimonial
+                        ? "bg-red-600"
+                        : "bg-gray-300"
+                    }`}
                     aria-label={`Ir al testimonio ${index + 1}`}
                     onClick={() => setCurrentTestimonial(index)}
                   ></button>

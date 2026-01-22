@@ -1,4 +1,13 @@
 import { defineConfig } from 'vite';
+
+// Dominios externos utilizados en la aplicación:
+// - https://res.cloudinary.com (Logos y recursos estáticos)
+// - https://api.whatsapp.com (Enlaces de contacto y redirección)
+// - https://lh3.googleusercontent.com (Imágenes de testimonios y contenido dinámico)
+// - https://www.google.com (Google Maps y enlaces de búsqueda)
+// - https://images.pexels.com (Imágenes de fondo/stock)
+// - https://www.facebook.com (Redes sociales)
+// - https://www.instagram.com (Redes sociales)
 import react from '@vitejs/plugin-react';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
