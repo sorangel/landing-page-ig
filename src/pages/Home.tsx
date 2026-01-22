@@ -661,9 +661,9 @@ const Home = () => {
             <div className="lg:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500">
                 <img
-                  src="/consulta-tramites.png"
+                  src="/consulta-tramites-meeting.jpg"
                   alt="Consulta Migratoria Profesional"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-[450px] object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
                   <div className="text-white">
@@ -906,7 +906,7 @@ const Home = () => {
           <div className="masonry mx-auto max-w-6xl columns-1 sm:columns-2 md:columns-3 lg:columns-4 content-stretch">
             {/* Card 1 */}
             <div
-              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
+              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-full aspect-square shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
               tabIndex={0}
               role="button"
               aria-label="Ver caso de éxito"
@@ -921,7 +921,7 @@ const Home = () => {
               <img
                 src="https://lh3.googleusercontent.com/d/1fNZmQ1aPxr8K_Frf7m-_IRHCu_aX9TTN"
                 alt="Visa de Trabajo"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover block"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0">
@@ -934,7 +934,7 @@ const Home = () => {
             </div>
             {/* Card 2 */}
             <div
-              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
+              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-full aspect-square shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
               tabIndex={0}
               role="button"
               aria-label="Ver caso de éxito"
@@ -949,7 +949,7 @@ const Home = () => {
               <img
                 src="https://lh3.googleusercontent.com/d/1T-DHM88qoTivsHZSieCbLYDejRBYzsm7"
                 alt="Residencia Permanente"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover block"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0">
@@ -962,7 +962,7 @@ const Home = () => {
             </div>
             {/* Card 3 */}
             <div
-              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
+              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-full aspect-square shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
               tabIndex={0}
               role="button"
               aria-label="Ver caso de éxito"
@@ -977,7 +977,7 @@ const Home = () => {
               <img
                 src="https://lh3.googleusercontent.com/d/1tSDmCHznN__j_ElCZYUuWTCBc6Cdbz0a"
                 alt="Ciudadanía"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover block"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0">
@@ -990,7 +990,7 @@ const Home = () => {
             </div>
             {/* Card 4 */}
             <div
-              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
+              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-full aspect-square shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
               tabIndex={0}
               role="button"
               aria-label="Ver caso de éxito"
@@ -1005,7 +1005,7 @@ const Home = () => {
               <img
                 src="https://lh3.googleusercontent.com/d/1_arasLaY3IHzsER22CGJNdHI59yyBAUa"
                 alt="Reunificación Familiar"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover block"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0">
@@ -1018,22 +1018,22 @@ const Home = () => {
             </div>
             {/* Card 5 */}
             <div
-              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
+              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-full aspect-square shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
               tabIndex={0}
               role="button"
               aria-label="Ver caso de éxito"
               onClick={() =>
                 openLightbox(
-                  "https://lh3.googleusercontent.com/d/1rkaRNiXA6_tD1nKDtJ9fqfwyw75g3GIq",
+                  "/caso-asilo-politico.jpg",
                   "Asilo Político",
                   "Asilo Político",
                 )
               }
             >
               <img
-                src="https://lh3.googleusercontent.com/d/1rkaRNiXA6_tD1nKDtJ9fqfwyw75g3GIq"
+                src="/caso-asilo-politico.jpg"
                 alt="Asilo Político"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover block"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0">
@@ -1046,7 +1046,7 @@ const Home = () => {
             </div>
             {/* Card 6 */}
             <div
-              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
+              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-full aspect-square shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
               tabIndex={0}
               role="button"
               aria-label="Ver caso de éxito"
@@ -1061,7 +1061,7 @@ const Home = () => {
               <img
                 src="https://lh3.googleusercontent.com/u/0/d/1EDmETRHjk4nDzLUKsxpdkpkAJ3YwZWEU"
                 alt="DACA"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover block"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0">
@@ -1074,7 +1074,7 @@ const Home = () => {
             </div>
             {/* Card 7 */}
             <div
-              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
+              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-full aspect-square shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
               tabIndex={0}
               role="button"
               aria-label="Ver caso de éxito"
@@ -1089,7 +1089,7 @@ const Home = () => {
               <img
                 src="https://lh3.googleusercontent.com/d/1g4PDEZ4GipMKugqoCA4y5N64cEThT7MT"
                 alt="Publicación IG - Caso de Éxito 2"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover block"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0">
@@ -1102,7 +1102,7 @@ const Home = () => {
             </div>
             {/* Card 8 */}
             <div
-              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
+              className="masonry-item js-case relative overflow-hidden cursor-zoom-in rounded-full aspect-square shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg mb-4"
               tabIndex={0}
               role="button"
               aria-label="Ver caso de éxito"
@@ -1117,7 +1117,7 @@ const Home = () => {
               <img
                 src="https://lh3.googleusercontent.com/u/0/d/1388ay_tdumImXtHf5xeQmgn0KaUVm70w"
                 alt="Publicación IG - Caso de Éxito 1"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover block"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0">
